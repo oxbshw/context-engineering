@@ -1,6 +1,30 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
+# Context-Engineering: Recursive Patterns for Self-Improving Contexts
+==================================================================
+
+This module explores recursive patterns in context engineering - approaches that enable LLMs to extend, refine, and evolve their own context. These patterns create feedback loops within prompts, allowing for iterative improvement, self-verification, and emergent capabilities beyond what's explicitly coded.
+
+Key concepts covered:
+1. Basic recursive patterns (self-reflection, bootstrapping)
+2. Field protocols and shells as recursive frameworks
+3. Symbolic residue and state tracking
+4. Boundary collapse and gradient systems
+5. Emergent attractors and resonance
+
+Usage:
+```python
+# In Jupyter or Colab:
+%run 07_recursive_patterns.py
+# or
+from recursive_patterns import RecursivePattern, FieldProtocol, SymbolicResidue
+```
+
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
 Context-Engineering: Recursive Patterns for Self-Improving Contexts
 ==================================================================
 
@@ -204,7 +228,7 @@ def format_metrics(metrics: Dict[str, Any]) -> str:
         "token_efficiency": f"{metrics.get('token_efficiency', 0):.2f}"
     }
     
-    return " | ".join([f"{k}: {v}" for k, v in key_metrics.items()])
+    return " | ".join([f"{k}: {v}" for k, v in key_metrics.items()]) 
 
 
 def display_recursive_pattern(
@@ -986,3 +1010,95 @@ Your response should include:
         
         # Check resonance score
         resonance_score = current_output.get("resonance_score", 0.0)
+        
+        # Continue if resonance score is improving significantly
+        if "resonance_scores" not in self.state:
+            self.state["resonance_scores"] = []
+        
+        self.state["resonance_scores"].append(resonance_score)
+        
+        if len(self.state["resonance_scores"]) > 1:
+            last_improvement = resonance_score - self.state["resonance_scores"][-2]
+            if last_improvement < 0.1:  # Minimal improvement threshold
+                self._log(f"Resonance score improvement below threshold: {last_improvement:.2f}")
+                return False
+        
+        return True
+
+
+# Example Usage
+# =============
+
+def example_self_reflection():
+    """Example of self-reflection pattern for continuous improvement."""
+    pattern = SelfReflection(
+        name="Self-Reflection Example",
+        description="Demonstrates continuous improvement through reflection",
+        improvement_threshold=0.9,
+        max_iterations=5,
+        verbose=True
+    )
+    
+    input_query = "What are the ethical implications of AI in healthcare?"
+    
+    final_output, iterations = pattern.run(input_query)
+    
+    # Display execution details
+    pattern.display_execution()
+    
+    # Visualize metrics
+    pattern.visualize_metrics()
+    
+    return final_output, iterations
+
+
+def example_recursive_bootstrap():
+    """Example of recursive bootstrapping for generating sophisticated strategies."""
+    pattern = RecursiveBootstrapping(
+        name="Recursive Bootstrapping Example",
+        description="Demonstrates bootstrapping to increasingly sophisticated strategies",
+        sophistication_levels=["basic", "intermediate", "advanced", "expert", "innovative"],
+        max_iterations=4,
+        verbose=True
+    )
+    
+    input_problem = "Design a system for personalized patient care that balances data privacy with medical effectiveness."
+    
+    final_output, iterations = pattern.run(input_problem)
+    
+    # Display execution details
+    pattern.display_execution()
+    
+    # Visualize metrics
+    pattern.visualize_metrics()
+    
+    return final_output, iterations
+
+
+def example_symbolic_residue():
+    """Example of symbolic residue pattern for tracking and integrating symbolic residue."""
+    pattern = SymbolicResidue(
+        name="Symbolic Residue Example",
+        description="Demonstrates tracking and evolving symbolic residue",
+        max_iterations=5,
+        verbose=True
+    )
+    
+    input_data = "Analyze the following text and extract key themes, patterns, and symbolic elements:"
+    
+    final_output, iterations = pattern.run(input_data)
+    
+    # Display execution details
+    pattern.display_execution()
+    
+    # Visualize metrics
+    pattern.visualize_metrics()
+    
+    return final_output, iterations
+
+
+# Main execution (when run as a script)
+if __name__ == "__main__":
+    print("Recursive Patterns for Self-Improving Contexts")
+    print("Run examples individually or import classes for your own use.")
+```
