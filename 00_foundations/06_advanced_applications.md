@@ -38,12 +38,12 @@ Creating long-form, coherent content pushes the limits of context management. Le
 │  │  Planning       │     │  Generation     │     │  Integration    │      │
 │  │                 │     │                 │     │                 │      │
 │  └─────────────────┘     └─────────────────┘     └─────────────────┘      │
-│         │                       │                       │                  │
-│         ▼                       ▼                       ▼                  │
+│         │                       │                       │                 │
+│         ▼                       ▼                       ▼                 │
 │  ┌─────────────┐         ┌─────────────┐         ┌─────────────┐          │
 │  │             │         │             │         │             │          │
 │  │ Outline     │         │ Section     │         │ Coherence   │          │
-│  │ Schema      │         │ Templates   │         │ Verification │          │
+│  │ Schema      │         │ Templates   │         │ Verification │         │
 │  │             │         │             │         │             │          │
 │  └─────────────┘         └─────────────┘         └─────────────┘          │
 │                                                                           │
@@ -263,8 +263,8 @@ Complex reasoning often requires tracking state across multiple steps while reta
 │  │  Analysis       │     │  Generation     │     │  & Refinement   │      │
 │  │                 │     │                 │     │                 │      │
 │  └─────────────────┘     └─────────────────┘     └─────────────────┘      │
-│         │                       │                       │                  │
-│         ▼                       ▼                       ▼                  │
+│         │                       │                       │                 │
+│         ▼                       ▼                       ▼                 │
 │  ┌─────────────┐         ┌─────────────┐         ┌─────────────┐          │
 │  │             │         │             │         │             │          │
 │  │ Structured  │         │ Chain-of-   │         │ Self-       │          │
@@ -490,8 +490,8 @@ Synthesizing information from multiple sources requires sophisticated context ma
 │  │  Retrieval      │     │  Extraction     │     │  & Synthesis    │      │
 │  │                 │     │                 │     │                 │      │
 │  └─────────────────┘     └─────────────────┘     └─────────────────┘      │
-│         │                       │                       │                  │
-│         ▼                       ▼                       ▼                  │
+│         │                       │                       │                 │
+│         ▼                       ▼                       ▼                 │
 │  ┌─────────────┐         ┌─────────────┐         ┌─────────────┐          │
 │  │             │         │             │         │             │          │
 │  │ Retrieval   │         │ Knowledge   │         │ Comparison  │          │
@@ -827,13 +827,13 @@ Personalized learning requires tracking user knowledge state and adapting conten
 │  │  Modeling       │     │  Selection      │     │  & Feedback     │      │
 │  │                 │     │                 │     │                 │      │
 │  └─────────────────┘     └─────────────────┘     └─────────────────┘      │
-│         │                       │                       │                  │
-│         ▼                       ▼                       ▼                  │
+│         │                       │                       │                 │
+│         ▼                       ▼                       ▼                 │
 │  ┌─────────────┐         ┌─────────────┐         ┌─────────────┐          │
 │  │             │         │             │         │             │          │
-│  │ User Model  │         │ Adaptive    │         │ Misconception│          │
-│  │ Schema      │         │ Challenge   │         │ Detection    │          │
-│  │             │         │ Template    │         │              │          │
+│  │ User Model  │         │ Adaptive    │         │ Misconception│         │
+│  │ Schema      │         │ Challenge   │         │ Detection    │         │
+│  │             │         │ Template    │         │              │         │
 │  └─────────────┘         └─────────────┘         └─────────────┘          │
 │                                                                           │
 └───────────────────────────────────────────────────────────────────────────┘
@@ -1252,16 +1252,16 @@ Advanced applications require balancing several competing factors:
 │ CONTEXT ENGINEERING TRADEOFFS                                     │
 ├───────────────────────────────────────────────────────────────────┤
 │ ◆ Complexity vs. Maintainability                                 │
-│   More complex systems can be harder to debug and maintain       │
-│                                                                  │
+│   More complex systems can be harder to debug and maintain        │
+│                                                                   │
 │ ◆ Token Usage vs. Quality                                        │
-│   More context generally improves quality but increases cost     │
-│                                                                  │
+│   More context generally improves quality but increases cost      │
+│                                                                   │
 │ ◆ Specialized vs. General-Purpose                                │
-│   Specialized components work better but are less reusable       │
-│                                                                  │
-│ ◆ Rigid Structure vs. Flexibility                                │
-│   Structured schemas improve consistency but reduce adaptability │
+│   Specialized components work better but are less reusable        │
+│                                                                   │
+│ ◆ Rigid Structure vs. Flexibility                                 │
+│   Structured schemas improve consistency but reduce adaptability  │
 └───────────────────────────────────────────────────────────────────┘
 ```
 
