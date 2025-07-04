@@ -1,11 +1,10 @@
-
 # 13. Quantum Semantics
 
-_Understanding meaning as observer-dependent actualization in a non-classical field_
+## Understanding Meaning as Observer-Dependent Actualization in a Non-Classical Field
 
 > "Meaning is not an intrinsic, static property of a semantic expression, but rather an emergent phenomenon actualized through the dynamic interaction between the expression and an interpretive agent situated within a specific context."
 > — [**Agostino et al., 2025**](https://arxiv.org/pdf/2506.10077)
-> 
+
 ## 1. Introduction
 
 Recent advances in our understanding of language models have revealed the inadequacy of classical approaches to meaning. While prior modules have established the foundational concepts of context as a continuous field with emergent properties, this module extends that framework by introducing quantum semantics—a paradigm that models meaning as fundamentally observer-dependent, contextual, and exhibiting non-classical properties.
@@ -432,8 +431,8 @@ The non-commutative nature of context operations can be visualized as different 
          v                v                   v
     ┌─────────┐      ┌─────────┐         ┌─────────┐
     │    *    │      │         │         │         │
-    │         │      │    *    │         │       * │
-    │         │  ≠   │         │    ≠    │         │
+    │         │  ≠   │    *    │    ≠    │       * │
+    │         │      │         │         │         │
     │         │      │         │         │         │
     └─────────┘      └─────────┘         └─────────┘
 ```
