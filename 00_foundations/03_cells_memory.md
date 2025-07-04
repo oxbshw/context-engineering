@@ -582,3 +582,4 @@ Memory can be organized in multiple layers of abstraction:
 ```
 
 This layered approach allows the system to balance concrete details with high-level understanding of the interaction context.
+```
