@@ -1,1 +1,3 @@
-# __init__.py for context_engine
+# This package contains the core context engineering logic
+
+__version__ = "0.1.0"
