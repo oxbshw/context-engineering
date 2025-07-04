@@ -1,994 +1,1267 @@
-# Prompt Programming: Structured Reasoning through Code-Like Patterns
+# Advanced Applications: Putting Context Engineering to Work
 
-> "The limits of my language mean the limits of my world." — Ludwig Wittgenstein
+> "In theory, theory and practice are the same. In practice, they are not." — Albert Einstein
 
-## The Convergence of Code and Prompts
-If our world is now limited by language, what comes next, if not the evolution of language itself?
+## Beyond the Basics: Applied Context Engineering
 
-In our journey through context engineering, we've progressed from atoms to cognitive tools. Now we explore a powerful synthesis: **context and prompt programming**—a hybrid approach that brings programming patterns to the world of prompts.
-
-```
-┌──────────────────────────────────────────────────────────────────────────┐
-│                                                                          │
-│                        PROMPT PROGRAMMING                                │
-│                                                                          │
-│  ┌───────────────────┐                    ┌───────────────────┐          │
-│  │                   │                    │                   │          │
-│  │  Programming      │                    │  Prompting        │          │
-│  │  Paradigms        │                    │  Techniques       │          │
-│  │                   │                    │                   │          │
-│  └───────────────────┘                    └───────────────────┘          │
-│           │                                        │                     │
-│           │                                        │                     │
-│           ▼                                        ▼                     │
-│  ┌──────────────────────────────────────────────────────────────────┐    │
-│  │                                                                  │    │
-│  │              Structured Reasoning Frameworks                     │    │
-│  │                                                                  │    │
-│  └──────────────────────────────────────────────────────────────────┘    │
-│                                                                          │
-└──────────────────────────────────────────────────────────────────────────┘
-```
-
-As highlighted in recent research by [IBM June (2025)](https://www.arxiv.org/pdf/2506.12115), prompt templates can act as cognitive tools and "prompt programs" that significantly enhance reasoning, similar to human heuristics (mental shortcuts). Prompt programming leverages the power of both worlds: the structured reasoning of programming and the flexible natural language of prompting.
-
-## Why Prompt Programming Works
-
-Prompt programming works because it helps language models perform complex reasoning by following structured patterns similar to how programming languages guide computation:
+We've built a solid foundation of context engineering concepts, from atomic prompts to cognitive tools. Now it's time to see how these principles apply to real-world challenges that push the boundaries of what's possible with LLMs.
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│ BENEFITS OF PROMPT PROGRAMMING                                      │
-├─────────────────────────────────────────────────────────────────────┤
-│ ✓ Provides clear reasoning scaffolds                                │
-│ ✓ Breaks complex problems into manageable steps                     │
-│ ✓ Enables systematic exploration of solution spaces                 │
-│ ✓ Creates reusable reasoning patterns                               │
-│ ✓ Reduces errors through structured validation                      │
-│ ✓ Improves consistency across different problems                    │
-└─────────────────────────────────────────────────────────────────────┘
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│              │     │              │     │              │     │              │
+│    Atoms     │────►│  Molecules   │────►│    Cells     │────►│    Organs    │
+│   (Prompts)  │     │  (Few-shot)  │     │   (Memory)   │     │(Multi-agent) │
+│              │     │              │     │              │     │              │
+└──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
+       │                    │                   │                    │
+       │                    │                   │                    │
+       │                    │                   │                    │
+       ▼                    ▼                   ▼                    ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│                         ADVANCED APPLICATIONS                                │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
 
-## The Core Concept: Cognitive Operations as Functions
+## Application Domain: Long-Form Content Creation
 
-The fundamental insight of prompt programming is treating cognitive operations as callable functions:
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│ Traditional Prompt                │ Prompt Programming              │
-├──────────────────────────────────┼──────────────────────────────────┤
-│ "Analyze the causes of World      │ analyze(                        │
-│  War I, considering political,    │   topic="causes of World War I",│
-│  economic, and social factors."   │   factors=["political",         │
-│                                   │            "economic",          │
-│                                   │            "social"],           │
-│                                   │   depth="comprehensive",        │
-│                                   │   format="structured"           │
-│                                   │ )                               │
-└──────────────────────────────────┴──────────────────────────────────┘
-```
-
-While both approaches can yield similar results, the prompt programming version:
-1. Makes parameters explicit
-2. Enables systematic variation of inputs
-3. Creates a reusable pattern for similar analyses
-4. Guides the model through a specific reasoning structure
-
-## Cognitive Tools vs. Prompt Programming
-
-Prompt programming represents an evolution of the cognitive tools concept:
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│ EVOLUTION OF STRUCTURED REASONING                                   │
-│                                                                     │
-│  ┌─────────────┐     ┌─────────────┐     ┌─────────────┐            │
-│  │             │     │             │     │             │            │
-│  │ Prompting   │────►│ Cognitive   │────►│ Prompt      │            │
-│  │             │     │ Tools       │     │ Programming │            │
-│  │             │     │             │     │             │            │
-│  └─────────────┘     └─────────────┘     └─────────────┘            │
-│                                                                     │
-│  "What causes      "Apply the        "analyze({                     │
-│   World War I?"     analysis tool     topic: 'World War I',         │
-│                     to World War I"   framework: 'causal',          │
-│                                       depth: 'comprehensive'        │
-│                                      })"                            │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
-## Key Programming Paradigms in Prompts
-
-Prompt programming draws from various programming paradigms:
-
-### 1. Functional Programming
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│ FUNCTIONAL PROGRAMMING PATTERNS                                     │
-├─────────────────────────────────────────────────────────────────────┤
-│ function analyze(topic, factors, depth) {                           │
-│   // Perform analysis based on parameters                           │
-│   return structured_analysis;                                       │
-│ }                                                                   │
-│                                                                     │
-│ function summarize(text, length, focus) {                           │
-│   // Generate summary with specified parameters                     │
-│   return summary;                                                   │
-│ }                                                                   │
-│                                                                     │
-│ // Function composition                                             │
-│ result = summarize(analyze("Climate change", ["economic",           │
-│                                             "environmental"],       │
-│                           "detailed"),                              │
-│                   "brief", "impacts");                              │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
-### 2. Procedural Programming
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│ PROCEDURAL PROGRAMMING PATTERNS                                     │
-├─────────────────────────────────────────────────────────────────────┤
-│ procedure solveEquation(equation) {                                 │
-│   step 1: Identify the type of equation                             │
-│   step 2: Apply appropriate solving method                          │
-│   step 3: Check solution validity                                   │
-│   step 4: Return the solution                                       │
-│ }                                                                   │
-│                                                                     │
-│ procedure analyzeText(text) {                                       │
-│   step 1: Identify main themes                                      │
-│   step 2: Extract key arguments                                     │
-│   step 3: Evaluate evidence quality                                 │
-│   step 4: Synthesize findings                                       │
-│ }                                                                   │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
-### 3. Object-Oriented Programming
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│ OBJECT-ORIENTED PROGRAMMING PATTERNS                                │
-├─────────────────────────────────────────────────────────────────────┤
-│ class TextAnalyzer {                                                │
-│   properties:                                                       │
-│     - text: The content to analyze                                  │
-│     - language: Language of the text                                │
-│     - focus_areas: Aspects to analyze                               │
-│                                                                     │
-│   methods:                                                          │
-│     - identifyThemes(): Find main themes                            │
-│     - extractEntities(): Identify people, places, etc.              │
-│     - analyzeSentiment(): Determine emotional tone                  │
-│     - generateSummary(): Create concise summary                     │
-│ }                                                                   │
-│                                                                     │
-│ analyzer = new TextAnalyzer(                                        │
-│   text="The article content...",                                    │
-│   language="English",                                               │
-│   focus_areas=["themes", "sentiment"]                               │
-│ )                                                                   │
-│                                                                     │
-│ themes = analyzer.identifyThemes()                                  │
-│ sentiment = analyzer.analyzeSentiment()                             │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
-## Implementing Prompt Programming
-
-Let's explore practical implementations of prompt programming:
-
-### 1. Basic Function Definition and Call
-
-```
-# Define a cognitive function
-function summarize(text, length="short", style="informative", focus=null) {
-  // Function description
-  // Summarize the provided text with specified parameters
-  
-  // Parameter validation
-  if (length not in ["short", "medium", "long"]) {
-    throw Error("Length must be short, medium, or long");
-  }
-  
-  // Processing logic
-  summary_length = {
-    "short": "1-2 paragraphs",
-    "medium": "3-4 paragraphs",
-    "long": "5+ paragraphs"
-  }[length];
-  
-  focus_instruction = focus ? 
-    `Focus particularly on aspects related to ${focus}.` : 
-    "Cover all main points evenly.";
-  
-  // Output specification
-  return `
-    Task: Summarize the following text.
-    
-    Parameters:
-    - Length: ${summary_length}
-    - Style: ${style}
-    - Special Instructions: ${focus_instruction}
-    
-    Text to summarize:
-    ${text}
-    
-    Please provide a ${style} summary of the text in ${summary_length}.
-    ${focus_instruction}
-  `;
-}
-
-# Call the function
-input_text = "Long article about climate change...";
-summarize(input_text, length="medium", focus="economic impacts");
-```
-
-### 2. Function Composition
-
-```
-# Define multiple cognitive functions
-function research(topic, depth="comprehensive", sources=5) {
-  // Function implementation
-  return `Research information about ${topic} at ${depth} depth using ${sources} sources.`;
-}
-
-function analyze(information, framework="thematic", perspective="neutral") {
-  // Function implementation
-  return `Analyze the following information using a ${framework} framework from a ${perspective} perspective: ${information}`;
-}
-
-function synthesize(analysis, format="essay", tone="academic") {
-  // Function implementation
-  return `Synthesize the following analysis into a ${format} with a ${tone} tone: ${analysis}`;
-}
-
-# Compose functions for a complex task
-topic = "Impact of artificial intelligence on employment";
-research_results = research(topic, depth="detailed", sources=8);
-analysis_results = analyze(research_results, framework="cause-effect", perspective="balanced");
-final_output = synthesize(analysis_results, format="report", tone="professional");
-```
-
-### 3. Conditional Logic and Control Flow
-
-```
-function solve_math_problem(problem, show_work=true, check_solution=true) {
-  // Determine problem type
-  if contains_variables(problem) {
-    approach = "algebraic";
-    steps = [
-      "Identify variables and constants", 
-      "Set up equations", 
-      "Solve for unknown variables",
-      "Verify solution in original problem"
-    ];
-  } else if contains_geometry_terms(problem) {
-    approach = "geometric";
-    steps = [
-      "Identify relevant geometric properties",
-      "Apply appropriate geometric formulas", 
-      "Calculate the required values",
-      "Verify consistency of the solution"
-    ];
-  } else {
-    approach = "arithmetic";
-    steps = [
-      "Break down the calculation into steps",
-      "Perform operations in the correct order",
-      "Calculate the final result",
-      "Verify the calculation"
-    ];
-  }
-  
-  // Construct the prompt
-  prompt = `
-    Task: Solve the following ${approach} problem.
-    
-    Problem: ${problem}
-    
-    ${show_work ? "Show your work step by step following this approach:" : "Provide only the final answer."}
-    ${show_work ? steps.map((step, i) => `${i+1}. ${step}`).join("\n") : ""}
-    
-    ${check_solution ? "After solving, verify your answer by checking if it satisfies all conditions in the original problem." : ""}
-  `;
-  
-  return prompt;
-}
-
-// Example usage
-problem = "If 3x + 7 = 22, find the value of x.";
-solve_math_problem(problem, show_work=true, check_solution=true);
-```
-
-### 4. Iterative Refinement Loops
-
-```
-function iterative_essay_writing(topic, iterations=3) {
-  // Initial draft
-  draft = `Write a basic first draft essay about ${topic}. Focus on getting the main ideas down.`;
-  
-  // Refinement loop
-  for (i = 1; i <= iterations; i++) {
-    if (i == 1) {
-      // First refinement: structure and content
-      draft = `
-        Review the following essay draft:
-        
-        ${draft}
-        
-        Improve the structure and content with these specific changes:
-        1. Add a clear thesis statement in the introduction
-        2. Ensure each paragraph has a topic sentence
-        3. Add supporting evidence for each main point
-        4. Create smoother transitions between paragraphs
-        
-        Provide the revised essay.
-      `;
-    } else if (i == 2) {
-      // Second refinement: language and style
-      draft = `
-        Review the following essay:
-        
-        ${draft}
-        
-        Improve the language and style with these changes:
-        1. Eliminate passive voice where appropriate
-        2. Replace generic terms with more specific ones
-        3. Vary sentence structure and length
-        4. Remove redundancies and filler phrases
-        
-        Provide the revised essay.
-      `;
-    } else {
-      // Final refinement: polish and finalize
-      draft = `
-        Review the following essay:
-        
-        ${draft}
-        
-        Make final improvements:
-        1. Ensure the conclusion effectively summarizes key points
-        2. Check for logical flow throughout the essay
-        3. Verify that the essay fully addresses the topic
-        4. Add a compelling final thought
-        
-        Provide the final polished essay.
-      `;
-    }
-  }
-  
-  return draft;
-}
-
-// Example usage
-essay_prompt = iterative_essay_writing("The impact of artificial intelligence on modern healthcare", iterations=3);
-```
-
-## Cognitive Tool Integration with Prompt Programming
-
-One of the most powerful applications of prompt programming is the creation of "cognitive tools" — specialized functions that encapsulate specific reasoning operations:
+Creating long-form, coherent content pushes the limits of context management. Let's see how our principles apply:
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
-│                     COGNITIVE TOOLS LIBRARY                               │
+│                    LONG-FORM CONTENT CREATION                             │
 │                                                                           │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐        │
-│  │                 │    │                 │    │                 │        │
-│  │ understand      │    │ recall_related  │    │ examine_answer  │        │
-│  │ question        │    │                 │    │                 │        │
-│  │                 │    │                 │    │                 │        │
-│  └─────────────────┘    └─────────────────┘    └─────────────────┘        │
-│                                                                           │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐        │
-│  │                 │    │                 │    │                 │        │
-│  │ backtracking    │    │ step_by_step    │    │ verify_logic    │        │
-│  │                 │    │                 │    │                 │        │
-│  │                 │    │                 │    │                 │        │
-│  └─────────────────┘    └─────────────────┘    └─────────────────┘        │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐      │
+│  │                 │     │                 │     │                 │      │
+│  │  Content        │────►│  Section        │────►│  Progressive    │      │
+│  │  Planning       │     │  Generation     │     │  Integration    │      │
+│  │                 │     │                 │     │                 │      │
+│  └─────────────────┘     └─────────────────┘     └─────────────────┘      │
+│         │                       │                       │                 │
+│         ▼                       ▼                       ▼                 │
+│  ┌─────────────┐         ┌─────────────┐         ┌─────────────┐          │
+│  │             │         │             │         │             │          │
+│  │ Outline     │         │ Section     │         │ Coherence   │          │
+│  │ Schema      │         │ Templates   │         │ Verification │         │
+│  │             │         │             │         │             │          │
+│  └─────────────┘         └─────────────┘         └─────────────┘          │
 │                                                                           │
 └───────────────────────────────────────────────────────────────────────────┘
 ```
 
-As outlined in Brown et al. (2025), these cognitive tools can be called within a prompt program to structure complex reasoning:
+### Implementation: Document Generation System
 
 ```python
-function solve_complex_problem(problem) {
-  // First, ensure we understand the question properly
-  understanding = understand_question(problem);
-  
-  // Recall related knowledge or examples
-  related_knowledge = recall_related(problem, limit=2);
-  
-  // Attempt step-by-step solution
-  solution_attempt = step_by_step(problem, context=[understanding, related_knowledge]);
-  
-  // Verify the solution
-  verification = verify_logic(solution_attempt);
-  
-  // If verification failed, try backtracking
-  if (!verification.is_correct) {
-    revised_solution = backtracking(solution_attempt, error_points=verification.issues);
-    return revised_solution;
-  }
-  
-  return solution_attempt;
-}
-
-// Example implementation of a cognitive tool
-function understand_question(question) {
-  return `
-    Task: Analyze and break down the following question.
+class LongFormGenerator:
+    """System for generating coherent long-form content."""
     
-    Question: ${question}
+    def __init__(self, llm_service):
+        self.llm = llm_service
+        self.document_state = {
+            "title": "",
+            "outline": [],
+            "sections": {},
+            "current_section": "",
+            "theme_keywords": [],
+            "style_guide": {},
+            "completed_sections": []
+        }
     
-    Please provide:
-    1. The core task being asked
-    2. Key components that need to be addressed
-    3. Any implicit assumptions
-    4. Constraints or conditions to consider
-    5. A clear restatement of the problem
-  `;
-}
+    def create_outline(self, topic, length="medium", style="informative"):
+        """Generate a structured outline for the document."""
+        # Example of a prompt program for outline generation
+        outline_prompt = f"""
+        Task: Create a detailed outline for a {length} {style} document about {topic}.
+        
+        Process:
+        1. Identify 3-5 main sections that comprehensively cover the topic
+        2. For each main section, identify 2-4 subsections
+        3. Add brief descriptions (1-2 sentences) of what each section will cover
+        4. Include suggested transitions between sections
+        
+        Format:
+        Title: [Suggested title]
+        
+        Main Sections:
+        1. [Section Title]
+           - Description: [Brief description]
+           - Subsections:
+             a. [Subsection Title]
+             b. [Subsection Title]
+           - Transition: [Suggestion for flowing to next section]
+        
+        2. [Continue pattern...]
+        
+        Theme Keywords: [5-7 key terms to maintain consistency]
+        Tone Guidelines: [3-4 stylistic recommendations]
+        """
+        
+        outline_response = self.llm.generate(outline_prompt)
+        self._parse_outline(outline_response)
+        return self.document_state["outline"]
+    
+    def _parse_outline(self, outline_text):
+        """Parse the outline response into a structured format."""
+        # In a real implementation, this would extract the structured outline
+        # For simplicity, we'll use a placeholder implementation
+        self.document_state["title"] = "Sample Document Title"
+        self.document_state["outline"] = [
+            {"title": "Introduction", "subsections": ["Background", "Importance"]},
+            {"title": "Main Section 1", "subsections": ["Subtopic A", "Subtopic B"]},
+            {"title": "Main Section 2", "subsections": ["Subtopic C", "Subtopic D"]},
+            {"title": "Conclusion", "subsections": ["Summary", "Future Directions"]}
+        ]
+        self.document_state["theme_keywords"] = ["keyword1", "keyword2", "keyword3"]
+        self.document_state["style_guide"] = {
+            "tone": "informative",
+            "perspective": "third person",
+            "style_notes": "Use concrete examples"
+        }
+    
+    def generate_section(self, section_index):
+        """Generate content for a specific section."""
+        section = self.document_state["outline"][section_index]
+        self.document_state["current_section"] = section["title"]
+        
+        # Create context-aware section prompt
+        context = self._build_section_context(section_index)
+        
+        section_prompt = f"""
+        Task: Write the "{section["title"]}" section of a document titled "{self.document_state["title"]}".
+        
+        Context:
+        {context}
+        
+        Guidelines:
+        - Maintain consistency with the document's themes and previous sections
+        - Address all subsections: {", ".join(section["subsections"])}
+        - Keep the tone {self.document_state["style_guide"]["tone"]}
+        - Write from the {self.document_state["style_guide"]["perspective"]} perspective
+        - {self.document_state["style_guide"]["style_notes"]}
+        
+        Format:
+        ## {section["title"]}
+        
+        [Content addressing all subsections, approximately 300-500 words]
+        """
+        
+        section_content = self.llm.generate(section_prompt)
+        self.document_state["sections"][section["title"]] = section_content
+        self.document_state["completed_sections"].append(section["title"])
+        
+        return section_content
+    
+    def _build_section_context(self, section_index):
+        """Build relevant context for generating a section."""
+        context = "Previous sections:\n"
+        
+        # Include summaries of previously written sections for context
+        for title in self.document_state["completed_sections"]:
+            # In practice, you'd include summaries rather than full text to save tokens
+            content = self.document_state["sections"].get(title, "")
+            summary = content[:100] + "..." if len(content) > 100 else content
+            context += f"- {title}: {summary}\n"
+        
+        # Include theme keywords for consistency
+        context += "\nTheme keywords: " + ", ".join(self.document_state["theme_keywords"])
+        
+        # Position information (beginning, middle, end)
+        total_sections = len(self.document_state["outline"])
+        if section_index == 0:
+            context += "\nThis is the opening section of the document."
+        elif section_index == total_sections - 1:
+            context += "\nThis is the concluding section of the document."
+        else:
+            context += f"\nThis is section {section_index + 1} of {total_sections}."
+        
+        return context
+    
+    def verify_coherence(self, section_index):
+        """Verify and improve coherence with previous sections."""
+        if section_index == 0:
+            return "First section - no coherence check needed."
+        
+        section = self.document_state["outline"][section_index]
+        previous_section = self.document_state["outline"][section_index - 1]
+        
+        current_content = self.document_state["sections"][section["title"]]
+        previous_content = self.document_state["sections"][previous_section["title"]]
+        
+        # Use a specialized prompt for verification
+        coherence_prompt = f"""
+        Task: Verify the coherence between two consecutive document sections.
+        
+        Previous Section: {previous_section["title"]}
+        {previous_content[-200:]}  # Last part of previous section
+        
+        Current Section: {section["title"]}
+        {current_content[:200]}  # First part of current section
+        
+        Process:
+        1. Identify any thematic or logical disconnects
+        2. Check for repetition or contradictions
+        3. Verify that transitions are smooth
+        4. Ensure consistent terminology and style
+        
+        Format:
+        Coherence Assessment: [Good/Needs Improvement]
+        
+        Issues Identified:
+        1. [Issue 1 if any]
+        2. [Issue 2 if any]
+        
+        Suggested Improvements:
+        [Specific suggestions for improving the connection]
+        """
+        
+        assessment = self.llm.generate(coherence_prompt)
+        
+        # In a full implementation, you would parse the assessment and apply improvements
+        return assessment
+    
+    def generate_complete_document(self):
+        """Generate the entire document, section by section."""
+        # First, ensure we have an outline
+        if not self.document_state["outline"]:
+            raise ValueError("Must create an outline first")
+        
+        # Generate each section in sequence
+        all_content = [f"# {self.document_state['title']}\n\n"]
+        
+        for i in range(len(self.document_state["outline"])):
+            section_content = self.generate_section(i)
+            
+            # For sections after the first, verify coherence
+            if i > 0:
+                coherence_check = self.verify_coherence(i)
+                # In practice, you would use this to improve the section
+            
+            all_content.append(section_content)
+        
+        # Combine all sections
+        return "\n\n".join(all_content)
 ```
 
-## Implementing a Complete Prompt Program
+This implementation demonstrates:
+1. **Structured content planning** using a prompt program
+2. **Progressive context building** as sections are generated
+3. **Coherence verification** between adjacent sections
+4. **State management** throughout the document creation process
 
-Let's implement a complete prompt program for mathematical reasoning:
+## Application Domain: Complex Reasoning with Memory
 
-```python
-// Define our cognitive tools
-function understand_math_problem(problem) {
-  return `
-    Task: Analyze this math problem thoroughly before solving.
-    
-    Problem: ${problem}
-    
-    Please provide:
-    1. What type of math problem is this? (algebra, geometry, calculus, etc.)
-    2. What are the key variables or unknowns?
-    3. What are the given values or constraints?
-    4. What is the question asking for specifically?
-    5. What formulas or methods will be relevant?
-  `;
-}
-
-function plan_solution_steps(problem_analysis) {
-  return `
-    Task: Create a step-by-step plan to solve this math problem.
-    
-    Problem Analysis: ${problem_analysis}
-    
-    Please outline a specific sequence of steps to solve this problem.
-    For each step:
-    1. What operation or method will be applied
-    2. What this step will accomplish
-    3. What the expected outcome of this step is
-    
-    Format each step clearly and number them sequentially.
-  `;
-}
-
-function execute_solution(problem, solution_plan) {
-  return `
-    Task: Solve this math problem following the provided plan.
-    
-    Problem: ${problem}
-    
-    Solution Plan: ${solution_plan}
-    
-    Please show all work for each step:
-    - Write out all equations
-    - Show all calculations
-    - Explain your reasoning at each step
-    - Highlight intermediate results
-    
-    After completing all steps, clearly state the final answer.
-  `;
-}
-
-function verify_solution(problem, solution) {
-  return `
-    Task: Verify the correctness of this math solution.
-    
-    Original Problem: ${problem}
-    
-    Proposed Solution: ${solution}
-    
-    Please check:
-    1. Are all calculations correct?
-    2. Were appropriate formulas and methods used?
-    3. Does the final answer actually solve the original problem?
-    4. Are there any logical errors or missed constraints?
-    
-    If you find any errors, explain them clearly. If the solution is correct,
-    confirm this and explain how you verified it.
-  `;
-}
-
-// Main problem-solving function
-function solve_math_with_cognitive_tools(problem) {
-  // Step 1: Understand the problem
-  problem_analysis = LLM(understand_math_problem(problem));
-  
-  // Step 2: Plan the solution approach
-  solution_plan = LLM(plan_solution_steps(problem_analysis));
-  
-  // Step 3: Execute the solution
-  detailed_solution = LLM(execute_solution(problem, solution_plan));
-  
-  // Step 4: Verify the solution
-  verification = LLM(verify_solution(problem, detailed_solution));
-  
-  // Step 5: Return the complete reasoning process
-  return {
-    original_problem: problem,
-    analysis: problem_analysis,
-    plan: solution_plan,
-    solution: detailed_solution,
-    verification: verification
-  };
-}
-
-// Example usage
-problem = "A rectangular garden has a perimeter of 36 meters. If the width is 6 meters, what is the length of the garden?";
-solve_math_with_cognitive_tools(problem);
-```
-
-## The Research Evidence: Brown et al. (2025)
-
-The recent work by Brown et al. (2025) on "Eliciting Reasoning in Language Models with Cognitive Tools" provides compelling evidence for the effectiveness of prompt programming:
+Complex reasoning often requires tracking state across multiple steps while retaining key insights:
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
-│ KEY FINDINGS FROM BROWN ET AL. (2025)                                     │
-├───────────────────────────────────────────────────────────────────────────┤
-│ ◆ Models with cognitive tools outperformed base models by 16.6% on        │
-│   mathematical reasoning benchmarks                                       │
+│                      COMPLEX REASONING SYSTEM                             │
 │                                                                           │
-│ ◆ Even GPT-4.1 showed a +16.6% improvement when using cognitive tools,    │
-│   bringing it close to o1-preview performance                             │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐      │
+│  │                 │     │                 │     │                 │      │
+│  │  Problem        │────►│  Solution       │────►│  Verification   │      │
+│  │  Analysis       │     │  Generation     │     │  & Refinement   │      │
+│  │                 │     │                 │     │                 │      │
+│  └─────────────────┘     └─────────────────┘     └─────────────────┘      │
+│         │                       │                       │                 │
+│         ▼                       ▼                       ▼                 │
+│  ┌─────────────┐         ┌─────────────┐         ┌─────────────┐          │
+│  │             │         │             │         │             │          │
+│  │ Structured  │         │ Chain-of-   │         │ Self-       │          │
+│  │ Problem     │         │ Thought     │         │ Correction  │          │
+│  │ Schema      │         │ Template    │         │ Loop        │          │
+│  │             │         │             │         │             │          │
+│  └─────────────┘         └─────────────┘         └─────────────┘          │
 │                                                                           │
-│ ◆ The improvement was consistent across model sizes and architectures     │
-│                                                                           │
-│ ◆ Cognitive tools were most effective when models could flexibly choose   │
-│   which tools to use and when                                             │
 └───────────────────────────────────────────────────────────────────────────┘
 ```
 
-The researchers found that:
-1. Breaking reasoning into modular steps improved performance
-2. The structured approach of cognitive tools provided a reasoning scaffold
-3. Models could better "show their work" with these tools
-4. Error rates decreased significantly across challenging problems
+### Implementation: Mathematical Problem Solver
 
-## Advanced Techniques: Meta-Programming
-
-At the frontier of prompt programming is the concept of "meta-programming" — prompts that can modify or generate other prompts:
-
-```
-function create_specialized_tool(task_type, complexity_level) {
-  // Generate a new cognitive tool based on parameters
-  return `
-    Task: Create a specialized cognitive tool for ${task_type} tasks at ${complexity_level} complexity.
+```python
+class MathProblemSolver:
+    """System for solving complex mathematical problems step by step."""
     
-    A cognitive tool should:
-    1. Have a clear and specific function
-    2. Break down complex reasoning into steps
-    3. Guide the model through a structured process
-    4. Include input validation and error handling
-    5. Produce well-formatted, useful output
+    def __init__(self, llm_service):
+        self.llm = llm_service
+        self.problem_state = {
+            "original_problem": "",
+            "parsed_problem": {},
+            "solution_steps": [],
+            "current_step": 0,
+            "verification_results": [],
+            "final_answer": ""
+        }
     
-    Please design a cognitive tool that:
-    - Is specialized for ${task_type} tasks
-    - Is appropriate for ${complexity_level} complexity
-    - Has clear parameters and return format
-    - Includes step-by-step guidance
+    def parse_problem(self, problem_text):
+        """Parse and structure the mathematical problem."""
+        # Schema-based problem parsing
+        parse_prompt = f"""
+        Task: Analyze and structure the following mathematical problem.
+        
+        Problem: {problem_text}
+        
+        Process:
+        1. Identify the problem type (algebra, calculus, geometry, etc.)
+        2. Extract relevant variables and their relationships
+        3. Identify constraints and conditions
+        4. Determine what is being asked for
+        
+        Format:
+        Problem Type: [Type]
+        
+        Variables:
+        - [Variable 1]: [Description]
+        - [Variable 2]: [Description]
+        
+        Relationships:
+        - [Equation or relationship 1]
+        - [Equation or relationship 2]
+        
+        Constraints:
+        - [Constraint 1]
+        - [Constraint 2]
+        
+        Goal: [What needs to be found]
+        
+        Suggested Approach: [Brief outline of solution method]
+        """
+        
+        parse_result = self.llm.generate(parse_prompt)
+        self.problem_state["original_problem"] = problem_text
+        
+        # In practice, you would parse the structured output
+        # For simplicity, we'll use a placeholder implementation
+        self.problem_state["parsed_problem"] = {
+            "type": "Algebra",
+            "variables": {"x": "unknown value", "y": "dependent value"},
+            "relationships": ["y = 2x + 3"],
+            "constraints": ["x > 0"],
+            "goal": "Find x when y = 15",
+            "approach": "Substitute y = 15 and solve for x"
+        }
+        
+        return self.problem_state["parsed_problem"]
     
-    Return the tool as a function definition with full implementation.
-  `;
-}
-
-// Example: Generate a specialized fact-checking tool
-fact_check_tool_generator = create_specialized_tool("fact-checking", "advanced");
-new_fact_check_tool = LLM(fact_check_tool_generator);
-
-// We can now use the generated tool
-fact_check_result = eval(new_fact_check_tool)("The first airplane flight was in 1903.", sources=3);
+    def generate_solution_step(self):
+        """Generate the next step in the solution process."""
+        # Build context from previous steps
+        context = self._build_step_context()
+        
+        step_prompt = f"""
+        Task: Generate the next step in solving this mathematical problem.
+        
+        Original Problem: {self.problem_state["original_problem"]}
+        
+        Problem Analysis:
+        Type: {self.problem_state["parsed_problem"]["type"]}
+        Goal: {self.problem_state["parsed_problem"]["goal"]}
+        
+        Previous Steps:
+        {context}
+        
+        Process:
+        1. Consider what has been accomplished in previous steps
+        2. Determine the next logical operation
+        3. Perform that operation, showing all work
+        4. Explain the mathematical reasoning
+        
+        Format:
+        Step {self.problem_state["current_step"] + 1}: [Brief description]
+        
+        Operation: [Mathematical operation performed]
+        
+        Work:
+        [Step-by-step calculations]
+        
+        Explanation:
+        [Why this step is necessary and what it accomplishes]
+        
+        Status: [Complete/More Steps Needed]
+        """
+        
+        step_result = self.llm.generate(step_prompt)
+        self.problem_state["solution_steps"].append(step_result)
+        self.problem_state["current_step"] += 1
+        
+        # Check if this step includes a final answer
+        if "Status: Complete" in step_result:
+            # Extract final answer (in practice, you'd parse this more carefully)
+            self.problem_state["final_answer"] = "x = 6"
+        
+        return step_result
+    
+    def _build_step_context(self):
+        """Build context from previous solution steps."""
+        if not self.problem_state["solution_steps"]:
+            return "No previous steps. This is the beginning of the solution."
+        
+        # Include all previous steps in the context
+        # In practice, you might need to summarize or truncate for token limitations
+        context = "Previous steps:\n"
+        for i, step in enumerate(self.problem_state["solution_steps"]):
+            context += f"Step {i+1}: {step[:200]}...\n"
+        
+        return context
+    
+    def verify_step(self, step_index):
+        """Verify the correctness of a specific solution step."""
+        if step_index >= len(self.problem_state["solution_steps"]):
+            return "Step index out of range"
+        
+        step = self.problem_state["solution_steps"][step_index]
+        
+        # Use a specialized prompt for verification
+        verify_prompt = f"""
+        Task: Verify the correctness of this mathematical solution step.
+        
+        Original Problem: {self.problem_state["original_problem"]}
+        
+        Step to Verify:
+        {step}
+        
+        Process:
+        1. Check mathematical operations for accuracy
+        2. Verify that the logic follows from previous steps
+        3. Ensure the explanation matches the work shown
+        4. Look for common errors or misconceptions
+        
+        Format:
+        Correctness: [Correct/Incorrect/Partially Correct]
+        
+        Issues Found:
+        - [Issue 1 if any]
+        - [Issue 2 if any]
+        
+        Suggested Correction:
+        [How to fix any issues identified]
+        """
+        
+        verification = self.llm.generate(verify_prompt)
+        self.problem_state["verification_results"].append(verification)
+        
+        return verification
+    
+    def solve_complete_problem(self, problem_text, max_steps=10):
+        """Solve the complete problem step by step with verification."""
+        # Parse the problem
+        self.parse_problem(problem_text)
+        
+        # Generate and verify steps until solution is complete
+        while self.problem_state["final_answer"] == "" and self.problem_state["current_step"] < max_steps:
+            # Generate the next step
+            step = self.generate_solution_step()
+            
+            # Verify the step
+            verification = self.verify_step(self.problem_state["current_step"] - 1)
+            
+            # If verification found issues, you might regenerate the step
+            # This is a simplified implementation
+            if "Correctness: Incorrect" in verification:
+                # In practice, you would use the feedback to improve the step
+                print(f"Step {self.problem_state['current_step']} had issues. Continuing anyway for this example.")
+        
+        # Return the complete solution
+        return {
+            "problem": self.problem_state["original_problem"],
+            "steps": self.problem_state["solution_steps"],
+            "verifications": self.problem_state["verification_results"],
+            "final_answer": self.problem_state["final_answer"]
+        }
 ```
 
-## Prompt Programming vs. Traditional Programming
+This implementation demonstrates:
+1. **Structured problem parsing** using a schema-based approach
+2. **Step-by-step reasoning** with explicit intermediate states
+3. **Self-verification** to check work at each stage
+4. **Memory management** to maintain context throughout the solution process
 
-While prompt programming borrows concepts from traditional programming, there are important differences:
+## Application Domain: Knowledge Synthesis
+
+Synthesizing information from multiple sources requires sophisticated context management:
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│ DIFFERENCES FROM TRADITIONAL PROGRAMMING                            │
-├──────────────────────────────┬──────────────────────────────────────┤
-│ Traditional Programming      │ Prompt Programming                   │
-├──────────────────────────────┼──────────────────────────────────────┤
-│ Executed by computers        │ Interpreted by language models       │
-├──────────────────────────────┼──────────────────────────────────────┤
-│ Strictly defined syntax      │ Flexible, natural language syntax    │
-├──────────────────────────────┼──────────────────────────────────────┤
-│ Deterministic execution      │ Probabilistic interpretation         │
-├──────────────────────────────┼──────────────────────────────────────┤
-│ Error = failure              │ Error = opportunity for correction   │
-├──────────────────────────────┼──────────────────────────────────────┤
-│ Focus on computation         │ Focus on reasoning                   │
-└──────────────────────────────┴──────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────┐
+│                      KNOWLEDGE SYNTHESIS SYSTEM                           │
+│                                                                           │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐      │
+│  │                 │     │                 │     │                 │      │
+│  │  Information    │────►│  Concept        │────►│  Integration    │      │
+│  │  Retrieval      │     │  Extraction     │     │  & Synthesis    │      │
+│  │                 │     │                 │     │                 │      │
+│  └─────────────────┘     └─────────────────┘     └─────────────────┘      │
+│         │                       │                       │                 │
+│         ▼                       ▼                       ▼                 │
+│  ┌─────────────┐         ┌─────────────┐         ┌─────────────┐          │
+│  │             │         │             │         │             │          │
+│  │ Retrieval   │         │ Knowledge   │         │ Comparison  │          │
+│  │ Query       │         │ Graph       │         │ Matrix      │          │
+│  │             │         │             │         │             │          │
+│  └─────────────┘         └─────────────┘         └─────────────┘          │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
-## Measuring Prompt Program Effectiveness
+### Implementation: Research Assistant
 
-As with all context engineering approaches, measurement is essential:
+```python
+class ResearchAssistant:
+    """System for synthesizing information from multiple sources."""
+    
+    def __init__(self, llm_service, retrieval_service):
+        self.llm = llm_service
+        self.retrieval = retrieval_service
+        self.research_state = {
+            "topic": "",
+            "query_results": [],
+            "extracted_concepts": {},
+            "concept_relationships": [],
+            "synthesis": "",
+            "knowledge_gaps": []
+        }
+    
+    def set_research_topic(self, topic):
+        """Set the research topic and generate initial queries."""
+        self.research_state["topic"] = topic
+        
+        # Generate structured queries using a prompt program
+        query_prompt = f"""
+        Task: Generate effective search queries for researching the topic: "{topic}"
+        
+        Process:
+        1. Break down the topic into its core components
+        2. For each component, generate specific search queries
+        3. Include queries for different perspectives on the topic
+        4. Add queries for background/foundational information
+        
+        Format:
+        Core Components:
+        - [Component 1]
+        - [Component 2]
+        
+        Recommended Queries:
+        1. [Specific query 1]
+        2. [Specific query 2]
+        3. [Specific query 3]
+        
+        Perspective Queries:
+        1. [Query for perspective 1]
+        2. [Query for perspective 2]
+        
+        Background Queries:
+        1. [Query for background 1]
+        2. [Query for background 2]
+        """
+        
+        query_suggestions = self.llm.generate(query_prompt)
+        
+        # In practice, you would parse the structured output
+        # For this example, we'll use placeholder queries
+        return ["query1", "query2", "query3"]
+    
+    def retrieve_information(self, queries):
+        """Retrieve information using the generated queries."""
+        # In a real implementation, this would call an actual retrieval service
+        # For this example, we'll use placeholder results
+        for query in queries:
+            # Simulate retrieval results
+            results = [
+                {"title": f"Result 1 for {query}", "content": "Sample content 1", "source": "Source A"},
+                {"title": f"Result 2 for {query}", "content": "Sample content 2", "source": "Source B"}
+            ]
+            self.research_state["query_results"].extend(results)
+        
+        return self.research_state["query_results"]
+    
+    def extract_concepts(self):
+        """Extract key concepts from the retrieved information."""
+        # Build context from retrieval results
+        context = self._build_retrieval_context()
+        
+        # Use a schema-based prompt for concept extraction
+        concept_prompt = f"""
+        Task: Extract key concepts from the following research information.
+        
+        Research Topic: {self.research_state["topic"]}
+        
+        Information Sources:
+        {context}
+        
+        Process:
+        1. Identify key concepts mentioned across multiple sources
+        2. For each concept, extract relevant details and definitions
+        3. Note variations or disagreements in how concepts are described
+        4. Assign a relevance score (1-10) to each concept
+        
+        Format:
+        Concept: [Concept Name 1]
+        Definition: [Consolidated definition]
+        Key Properties:
+        - [Property 1]
+        - [Property 2]
+        Source Variations:
+        - [Source A]: [How this source describes it]
+        - [Source B]: [How this source describes it]
+        Relevance Score: [1-10]
+        
+        Concept: [Concept Name 2]
+        ...
+        """
+        
+        extraction_results = self.llm.generate(concept_prompt)
+        
+        # In practice, you would parse the structured output
+        # For this example, we'll use placeholder concepts
+        self.research_state["extracted_concepts"] = {
+            "concept1": {
+                "definition": "Definition of concept1",
+                "properties": ["property1", "property2"],
+                "source_variations": {
+                    "Source A": "Description from A",
+                    "Source B": "Description from B"
+                },
+                "relevance": 8
+            },
+            "concept2": {
+                "definition": "Definition of concept2",
+                "properties": ["property1", "property2"],
+                "source_variations": {
+                    "Source A": "Description from A",
+                    "Source B": "Description from B"
+                },
+                "relevance": 7
+            }
+        }
+        
+        return self.research_state["extracted_concepts"]
+    
+    def _build_retrieval_context(self):
+        """Build context from retrieval results."""
+        if not self.research_state["query_results"]:
+            return "No information retrieved yet."
+        
+        # Include a sample of retrieved information
+        # In practice, you might need to summarize or select for token limitations
+        context = ""
+        for i, result in enumerate(self.research_state["query_results"][:5]):
+            context += f"Source {i+1}: {result['title']}\n"
+            context += f"Content: {result['content'][:200]}...\n"
+            context += f"Source: {result['source']}\n\n"
+        
+        return context
+    
+    def analyze_relationships(self):
+        """Analyze relationships between extracted concepts."""
+        if not self.research_state["extracted_concepts"]:
+            return "No concepts extracted yet."
+        
+        # Get a list of concept names
+        concepts = list(self.research_state["extracted_concepts"].keys())
+        
+        # Use a comparison matrix template for relationship analysis
+        relationship_prompt = f"""
+        Task: Analyze relationships between key concepts in the research topic.
+        
+        Research Topic: {self.research_state["topic"]}
+        
+        Concepts to Analyze:
+        {", ".join(concepts)}
+        
+        Process:
+        1. Create a relationship matrix between all concepts
+        2. For each pair, determine the type of relationship
+        3. Note the strength of each relationship (1-5)
+        4. Identify any conflicting or complementary relationships
+        
+        Format:
+        Relationship Matrix:
+        
+        | Concept | {" | ".join(concepts)} |
+        |---------|{"-|" * len(concepts)}
+        """
+        
+        # Add rows for each concept
+        for concept in concepts:
+            relationship_prompt += f"| {concept} |"
+            for other in concepts:
+                if concept == other:
+                    relationship_prompt += " X |"
+                else:
+                    relationship_prompt += " ? |"
+            relationship_prompt += "\n"
+        
+        relationship_prompt += """
+        
+        Detailed Relationships:
+        
+        [Concept A] → [Concept B]
+        Type: [Causal/Hierarchical/Correlational/etc.]
+        Strength: [1-5]
+        Description: [Brief description of how they relate]
+        
+        [Continue for other relevant pairs...]
+        """
+        
+        relationship_results = self.llm.generate(relationship_prompt)
+        
+        # In practice, you would parse the structured output
+        # For this example, we'll use placeholder relationships
+        self.research_state["concept_relationships"] = [
+            {
+                "source": "concept1",
+                "target": "concept2",
+                "type": "causal",
+                "strength": 4,
+                "description": "Concept1 directly influences Concept2"
+            }
+        ]
+        
+        return self.research_state["concept_relationships"]
+    
+    def synthesize_research(self):
+        """Synthesize a comprehensive research summary."""
+        # Ensure we have extracted concepts and relationships
+        if not self.research_state["extracted_concepts"]:
+            self.extract_concepts()
+        
+        if not self.research_state["concept_relationships"]:
+            self.analyze_relationships()
+        
+        # Build context from concepts and relationships
+        concepts_str = json.dumps(self.research_state["extracted_concepts"], indent=2)
+        relationships_str = json.dumps(self.research_state["concept_relationships"], indent=2)
+        
+        synthesis_prompt = f"""
+        Task: Synthesize a comprehensive research summary on the topic.
+        
+        Research Topic: {self.research_state["topic"]}
+        
+        Key Concepts:
+        {concepts_str}
+        
+        Concept Relationships:
+        {relationships_str}
+        
+        Process:
+        1. Create a coherent narrative integrating the key concepts
+        2. Highlight areas of consensus across sources
+        3. Note important disagreements or contradictions
+        4. Identify knowledge gaps or areas for further research
+        5. Summarize the most important findings
+        
+        Format:
+        # Research Synthesis: [Topic]
+        
+        ## Key Findings
+        [Summary of the most important insights]
+        
+        ## Concept Integration
+        [Narrative connecting the concepts and their relationships]
+        
+        ## Areas of Consensus
+        [Points where sources agree]
+        
+        ## Areas of Disagreement
+        [Points where sources disagree or contradict]
+        
+        ## Knowledge Gaps
+        [Areas where more research is needed]
+        
+        ## Conclusion
+        [Overall assessment of the current state of knowledge]
+        """
+        
+        synthesis = self.llm.generate(synthesis_prompt)
+        self.research_state["synthesis"] = synthesis
+        
+        # Extract knowledge gaps (in practice, you would parse these from the synthesis)
+        self.research_state["knowledge_gaps"] = [
+            "Gap 1: More research needed on X",
+            "Gap 2: Unclear relationship between Y and Z"
+        ]
+        
+        return synthesis
+    
+    def complete_research_cycle(self, topic):
+        """Run a complete research cycle from topic to synthesis."""
+        # Set the research topic and generate queries
+        queries = self.set_research_topic(topic)
+        
+        # Retrieve information
+        self.retrieve_information(queries)
+        
+        # Extract and analyze concepts
+        self.extract_concepts()
+        self.analyze_relationships()
+        
+        # Synthesize research findings
+        synthesis = self.synthesize_research()
+        
+        return {
+            "topic": topic,
+            "synthesis": synthesis,
+            "concepts": self.research_state["extracted_concepts"],
+            "relationships": self.research_state["concept_relationships"],
+            "knowledge_gaps": self.research_state["knowledge_gaps"]
+        }
+```
+
+This implementation demonstrates:
+1. **Structured query generation** to retrieve relevant information
+2. **Schema-based concept extraction** to identify key ideas
+3. **Relationship analysis** using a comparison matrix approach
+4. **Knowledge synthesis** that integrates concepts into a coherent narrative
+
+## Application Domain: Adaptive Learning Systems
+
+Personalized learning requires tracking user knowledge state and adapting content accordingly:
+
+```
+┌───────────────────────────────────────────────────────────────────────────┐
+│                      ADAPTIVE LEARNING SYSTEM                             │
+│                                                                           │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐      │
+│  │                 │     │                 │     │                 │      │
+│  │  Knowledge      │────►│  Content        │────►│  Assessment     │      │
+│  │  Modeling       │     │  Selection      │     │  & Feedback     │      │
+│  │                 │     │                 │     │                 │      │
+│  └─────────────────┘     └─────────────────┘     └─────────────────┘      │
+│         │                       │                       │                 │
+│         ▼                       ▼                       ▼                 │
+│  ┌─────────────┐         ┌─────────────┐         ┌─────────────┐          │
+│  │             │         │             │         │             │          │
+│  │ User Model  │         │ Adaptive    │         │ Misconception│         │
+│  │ Schema      │         │ Challenge   │         │ Detection    │         │
+│  │             │         │ Template    │         │              │         │
+│  └─────────────┘         └─────────────┘         └─────────────┘          │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘
+```
+
+### Implementation: Personalized Tutor
+
+```python
+class PersonalizedTutor:
+    """Adaptive learning system that personalizes content based on user knowledge."""
+    
+    def __init__(self, llm_service):
+        self.llm = llm_service
+        self.learning_state = {
+            "subject": "",
+            "user_profile": {
+                "name": "",
+                "skill_level": "",  # beginner, intermediate, advanced
+                "learning_style": "",  # visual, auditory, kinesthetic, etc.
+                "known_concepts": [],
+                "struggling_concepts": [],
+                "mastered_concepts": []
+            },
+            "domain_model": {
+                "concepts": {},
+                "concept_dependencies": []
+            },
+            "session_history": [],
+            "current_concept": "",
+            "next_concepts": []
+        }
+    
+    def initialize_user_profile(self, name, subject, initial_assessment=None):
+        """Initialize a user profile and knowledge state."""
+        self.learning_state["subject"] = subject
+        self.learning_state["user_profile"]["name"] = name
+        
+        if initial_assessment:
+            # Parse assessment results
+            self._parse_assessment(initial_assessment)
+        else:
+            # Generate an initial assessment
+            self._generate_initial_assessment()
+        
+        # Initialize domain model
+        self._initialize_domain_model()
+        
+        return self.learning_state["user_profile"]
+    
+    def _parse_assessment(self, assessment_results):
+        """Parse results from an initial assessment."""
+        # In practice, this would parse actual assessment data
+        # For this example, we'll use placeholder data
+        self.learning_state["user_profile"]["skill_level"] = "intermediate"
+        self.learning_state["user_profile"]["learning_style"] = "visual"
+        self.learning_state["user_profile"]["known_concepts"] = ["concept1", "concept2"]
+        self.learning_state["user_profile"]["struggling_concepts"] = ["concept3"]
+        self.learning_state["user_profile"]["mastered_concepts"] = []
+    
+    def _generate_initial_assessment(self):
+        """Generate an initial assessment of user knowledge."""
+        # In a real implementation, this would generate questions to assess user knowledge
+        # For simplicity, we'll use placeholder data
+        self.learning_state["user_profile"]["skill_level"] = "beginner"
+        self.learning_state["user_profile"]["learning_style"] = "visual"
+        self.learning_state["user_profile"]["known_concepts"] = []
+        self.learning_state["user_profile"]["struggling_concepts"] = []
+        self.learning_state["user_profile"]["mastered_concepts"] = []
+    
+    def _initialize_domain_model(self):
+        """Initialize the domain model for the subject."""
+        # Use a schema-based prompt to model the domain
+        domain_prompt = f"""
+        Task: Create a structured knowledge model for the subject: {self.learning_state["subject"]}
+        
+        Process:
+        1. Identify core concepts in this subject
+        2. For each concept, provide a brief definition
+        3. Specify prerequisites for each concept
+        4. Identify common misconceptions
+        5. Determine appropriate difficulty levels
+        
+        Format:
+        Concept: [Concept Name 1]
+        Definition: [Brief definition]
+        Prerequisites: [List of prerequisite concepts, if any]
+        Misconceptions: [Common misunderstandings]
+        Difficulty: [Beginner/Intermediate/Advanced]
+        
+        Concept: [Concept Name 2]
+        ...
+        
+        Dependency Map:
+        [Concept A] → [Concept B] (indicating B depends on understanding A)
+        [Concept B] → [Concept C, Concept D]
+        ...
+        """
+        
+        domain_model = self.llm.generate(domain_prompt)
+        
+        # In practice, you would parse the structured output
+        # For this example, we'll use placeholder data
+        self.learning_state["domain_model"]["concepts"] = {
+            "concept1": {
+                "definition": "Definition of concept1",
+                "prerequisites": [],
+                "misconceptions": ["Common misunderstanding 1"],
+                "difficulty": "beginner"
+            },
+            "concept2": {
+                "definition": "Definition of concept2",
+                "prerequisites": ["concept1"],
+                "misconceptions": ["Common misunderstanding 2"],
+                "difficulty": "beginner"
+            },
+            "concept3": {
+                "definition": "Definition of concept3",
+                "prerequisites": ["concept1", "concept2"],
+                "misconceptions": ["Common misunderstanding 3"],
+                "difficulty": "intermediate"
+            }
+        }
+        
+        self.learning_state["domain_model"]["concept_dependencies"] = [
+            {"source": "concept1", "target": "concept2"},
+            {"source": "concept1", "target": "concept3"},
+            {"source": "concept2", "target": "concept3"}
+        ]
+        
+        return self.learning_state["domain_model"]
+    
+    def select_next_concept(self):
+        """Select the next concept to teach based on user state."""
+        # Build context from user profile and domain model
+        user_profile = self.learning_state["user_profile"]
+        domain_model = self.learning_state["domain_model"]
+        
+        # Use a context-aware prompt to select the next concept
+        selection_prompt = f"""
+        Task: Select the most appropriate next concept to teach.
+        
+        User Profile:
+        Name: {user_profile["name"]}
+        Skill Level: {user_profile["skill_level"]}
+        Learning Style: {user_profile["learning_style"]}
+        Known Concepts: {", ".join(user_profile["known_concepts"])}
+        Struggling Concepts: {", ".join(user_profile["struggling_concepts"])}
+        Mastered Concepts: {", ".join(user_profile["mastered_concepts"])}
+        
+        Domain Model:
+        {json.dumps(domain_model["concepts"], indent=2)}
+        
+        Concept Dependencies:
+        {json.dumps(domain_model["concept_dependencies"], indent=2)}
+        
+        Process:
+        1. Identify concepts where prerequisites are satisfied
+        2. Consider user's skill level and struggling concepts
+        3. Prioritize concepts that build on mastered content
+        4. Avoid concepts that are too advanced for current state
+        
+        Format:
+        Selected Concept: [Concept Name]
+        
+        Justification:
+        [Explanation of why this concept is appropriate]
+        
+        Alternative Concepts:
+        1. [Alternative 1]: [Brief reason]
+        2. [Alternative 2]: [Brief reason]
+        """
+        
+        selection_result = self.llm.generate(selection_prompt)
+        
+        # In practice, you would parse the concept from the output
+        # For this example, we'll use a placeholder
+        selected_concept = "concept2"
+        self.learning_state["current_concept"] = selected_concept
+        
+        return selected_concept
+    
+    def generate_learning_content(self):
+        """Generate personalized learning content for the current concept."""
+        # Ensure we have a current concept
+        if not self.learning_state["current_concept"]:
+            self.select_next_concept()
+        
+        current_concept = self.learning_state["current_concept"]
+        concept_data = self.learning_state["domain_model"]["concepts"][current_concept]
+        user_profile = self.learning_state["user_profile"]
+        
+        # Use an adaptive template to generate personalized content
+        content_prompt = f"""
+        Task: Create personalized learning content for the concept: {current_concept}
+        
+        User Profile:
+        Name: {user_profile["name"]}
+        Skill Level: {user_profile["skill_level"]}
+        Learning Style: {user_profile["learning_style"]}
+        Known Concepts: {", ".join(user_profile["known_concepts"])}
+        
+        Concept Information:
+        Definition: {concept_data["definition"]}
+        Common Misconceptions: {", ".join(concept_data["misconceptions"])}
+        
+        Process:
+        1. Adapt the explanation to the user's skill level
+        2. Use examples that build on known concepts
+        3. Explicitly address common misconceptions
+        4. Tailor the presentation to the user's learning style
+        5. Include practice questions to reinforce understanding
+        
+        Format:
+        # Learning Module: {current_concept}
+        
+        ## Introduction
+        [Brief, engaging introduction appropriate for skill level]
+        
+        ## Core Explanation
+        [Main explanation, adapted to learning style]
+        
+        ## Examples
+        [Examples that build on known concepts]
+        
+        ## Common Misconceptions
+        [Address misconceptions directly]
+        
+        ## Practice Questions
+        1. [Question 1]
+        2. [Question 2]
+        3. [Question 3]
+        
+        ## Summary
+        [Brief recap of key points]
+        """
+        
+        learning_content = self.llm.generate(content_prompt)
+        
+        # Add to session history
+        self.learning_state["session_history"].append({
+            "concept": current_concept,
+            "content": learning_content,
+            "timestamp": time.time()
+        })
+        
+        return learning_content
+    
+    def process_user_response(self, concept, user_response):
+        """Process and evaluate a user's response to practice questions."""
+        # Build context from the concept and domain model
+        concept_data = self.learning_state["domain_model"]["concepts"][concept]
+        
+        # Use a specialized prompt for response evaluation
+        eval_prompt = f"""
+        Task: Evaluate the user's understanding based on their response.
+        
+        Concept: {concept}
+        Definition: {concept_data["definition"]}
+        Common Misconceptions: {", ".join(concept_data["misconceptions"])}
+        
+        User Response:
+        {user_response}
+        
+        Process:
+        1. Assess accuracy of the response
+        2. Identify any misconceptions present
+        3. Determine level of understanding
+        4. Generate constructive feedback
+        5. Create follow-up questions if needed
+        
+        Format:
+        Understanding Level: [Full/Partial/Minimal]
+        
+        Strengths:
+        - [What the user understood correctly]
+        
+        Gaps:
+        - [What the user missed or misunderstood]
+        
+        Detected Misconceptions:
+        - [Any specific misconceptions identified]
+        
+        Feedback:
+        [Constructive, encouraging feedback]
+        
+        Follow-up Questions:
+        1. [Question to address specific gap]
+        2. [Question to confirm understanding]
+        """
+        
+        evaluation = self.llm.generate(eval_prompt)
+        
+        # Update user profile based on evaluation
+        # In practice, you would parse the evaluation more carefully
+        if "Understanding Level: Full" in evaluation:
+            if concept in self.learning_state["user_profile"]["struggling_concepts"]:
+                self.learning_state["user_profile"]["struggling_concepts"].remove(concept)
+            if concept not in self.learning_state["user_profile"]["mastered_concepts"]:
+                self.learning_state["user_profile"]["mastered_concepts"].append(concept)
+        elif "Understanding Level: Minimal" in evaluation:
+            if concept not in self.learning_state["user_profile"]["struggling_concepts"]:
+                self.learning_state["user_profile"]["struggling_concepts"].append(concept)
+        
+        # Ensure concept is in known concepts
+        if concept not in self.learning_state["user_profile"]["known_concepts"]:
+            self.learning_state["user_profile"]["known_concepts"].append(concept)
+        
+        return evaluation
+    
+    def run_learning_session(self, num_concepts=3):
+        """Run a complete learning session covering multiple concepts."""
+        session_results = []
+        
+        for i in range(num_concepts):
+            # Select next concept
+            concept = self.select_next_concept()
+            
+            # Generate learning content
+            content = self.generate_learning_content()
+            
+            # In a real application, you would collect and process user responses here
+            # For this example, we'll simulate user responses
+            simulated_response = f"Simulated response to {concept}"
+            evaluation = self.process_user_response(concept, simulated_response)
+            
+            session_results.append({
+                "concept": concept,
+                "content": content,
+                "evaluation": evaluation
+            })
+        
+        return {
+            "user_profile": self.learning_state["user_profile"],
+            "concepts_covered": [r["concept"] for r in session_results],
+            "session_results": session_results
+        }
+```
+
+This implementation demonstrates:
+1. **User knowledge modeling** using a schema-based approach
+2. **Adaptive content selection** based on prerequisites and user state
+3. **Personalized content generation** tailored to learning style and knowledge
+4. **Response evaluation** with misconception detection
+
+## Key Patterns for Advanced Applications
+
+Across these diverse applications, we can identify common patterns that enhance context engineering effectiveness:
 
 ```
 ┌───────────────────────────────────────────────────────────────────┐
-│ MEASUREMENT DIMENSIONS FOR PROMPT PROGRAMS                        │
-├──────────────────────────────┬────────────────────────────────────┤
-│ Dimension                    │ Metrics                            │
-├──────────────────────────────┼────────────────────────────────────┤
-│ Reasoning Quality            │ Accuracy, Step Validity, Logic     │
-│                              │ Coherence                          │
-├──────────────────────────────┼────────────────────────────────────┤
-│ Program Efficiency           │ Token Usage, Function Call Count   │
-├──────────────────────────────┼────────────────────────────────────┤
-│ Reusability                  │ Cross-Domain Performance, Parameter│
-│                              │ Sensitivity                        │
-├──────────────────────────────┼────────────────────────────────────┤
-│ Error Recovery               │ Self-Correction Rate, Iteration    │
-│                              │ Improvement                        │
-└──────────────────────────────┴────────────────────────────────────┘
-```
-
-## Practical Applications of Prompt Programming
-
-Prompt programming enables sophisticated applications across domains:
-
-```
-┌───────────────────────────────────────────────────────────────────┐
-│ APPLICATIONS OF PROMPT PROGRAMMING                                │
+│ ADVANCED CONTEXT ENGINEERING PATTERNS                             │
 ├───────────────────────────────────────────────────────────────────┤
-│ ◆ Complex Mathematical Problem Solving                            │
-│ ◆ Multi-step Legal Analysis                                       │
-│ ◆ Scientific Research Synthesis                                   │
-│ ◆ Structured Creative Writing                                     │
-│ ◆ Code Generation and Debugging                                   │
-│ ◆ Strategy Development and Decision Making                        │
-│ ◆ Ethical Reasoning and Analysis                                  │
+│ ◆ State Management: Tracking complex state across interactions    │
+│ ◆ Progressive Context: Building context incrementally             │
+│ ◆ Verification Loops: Self-checking for quality and accuracy      │
+│ ◆ Structured Schemas: Organizing information systematically       │
+│ ◆ Template Programs: Reusable prompt patterns for specific tasks  │
+│ ◆ Personalization: Adapting to user needs and context             │
+│ ◆ Multi-step Processing: Breaking complex tasks into phases       │
 └───────────────────────────────────────────────────────────────────┘
 ```
 
-## Implementing Your First Prompt Program
+## Measuring Application Performance
 
-Let's implement a simple but useful prompt program for text analysis:
+As with simpler context structures, measurement remains crucial for advanced applications:
 
-```python
-// Text analysis prompt program
-function analyze_text(text, analysis_types=["themes", "tone", "style"], depth="detailed") {
-  // Parameter validation
-  valid_types = ["themes", "tone", "style", "structure", "argument", "bias"];
-  analysis_types = analysis_types.filter(type => valid_types.includes(type));
-  
-  if (analysis_types.length === 0) {
-    throw Error("At least one valid analysis type must be specified");
-  }
-  
-  // Depth settings
-  depth_settings = {
-    "brief": "Provide a concise overview with 1-2 points per category",
-    "detailed": "Provide a thorough analysis with 3-5 points per category and specific examples",
-    "comprehensive": "Provide an exhaustive analysis with 5+ points per category, specific examples, and nuanced discussion"
-  };
-  
-  // Construct specialized analysis prompts for each type
-  analysis_prompts = {
-    "themes": `
-      Analyze the main themes in the text:
-      - Identify the primary themes and motifs
-      - Explain how these themes are developed
-      - Note any subthemes or connected ideas
-    `,
-    
-    "tone": `
-      Analyze the tone of the text:
-      - Identify the overall emotional tone
-      - Note any shifts in tone throughout the text
-      - Explain how tone is conveyed through word choice and style
-    `,
-    
-    "style": `
-      Analyze the writing style:
-      - Describe the overall writing style and voice
-      - Identify notable stylistic elements (sentence structure, vocabulary, etc.)
-      - Comment on how style relates to the content and purpose
-    `,
-    
-    "structure": `
-      Analyze the text structure:
-      - Outline the organizational pattern used
-      - Evaluate the effectiveness of the structure
-      - Note any structural techniques that enhance the message
-    `,
-    
-    "argument": `
-      Analyze the argument presented:
-      - Identify the main claims or thesis
-      - Evaluate the evidence provided
-      - Assess the logical flow and reasoning
-      - Note any logical fallacies or strengths
-    `,
-    
-    "bias": `
-      Analyze potential bias in the text:
-      - Identify any evident perspective or slant
-      - Note language that suggests bias
-      - Consider what viewpoints may be underrepresented
-      - Assess how bias might influence interpretation
-    `
-  };
-  
-  // Build the complete analysis prompt
-  selected_analyses = analysis_types.map(type => analysis_prompts[type]).join("\n\n");
-  
-  final_prompt = `
-    Task: Analyze the following text according to these specific dimensions.
-    
-    Text:
-    "${text}"
-    
-    Analysis Dimensions:
-    ${selected_analyses}
-    
-    Analysis Depth:
-    ${depth_settings[depth]}
-    
-    Format:
-    Provide your analysis organized by each requested dimension with clear headings.
-    Support all observations with specific evidence from the text.
-    
-    Begin your analysis:
-  `;
-  
-  return final_prompt;
-}
-
-// Example usage
-sample_text = "Climate change represents one of the greatest challenges facing humanity today...";
-analysis_prompt = analyze_text(sample_text, analysis_types=["themes", "argument", "bias"], depth="detailed");
+```
+┌───────────────────────────────────────────────────────────────────┐
+│ MEASUREMENT DIMENSIONS FOR ADVANCED APPLICATIONS                  │
+├──────────────────────────────┬────────────────────────────────────┤
+│ Dimension                    │ Metrics                            │
+├──────────────────────────────┼────────────────────────────────────┤
+│ End-to-End Quality           │ Accuracy, Correctness, Coherence   │
+├──────────────────────────────┼────────────────────────────────────┤
+│ Efficiency                   │ Total Tokens, Time-to-Completion   │
+├──────────────────────────────┼────────────────────────────────────┤
+│ Robustness                   │ Error Recovery Rate, Edge Case     │
+│                              │ Handling                           │
+├──────────────────────────────┼────────────────────────────────────┤
+│ User Satisfaction            │ Relevance, Personalization Accuracy│
+├──────────────────────────────┼────────────────────────────────────┤
+│ Self-Improvement             │ Error Reduction Over Time          │
+└──────────────────────────────┴────────────────────────────────────┘
 ```
 
 ## Key Takeaways
 
-1. **Prompt programming** combines programming concepts with natural language prompting
-2. **Cognitive tools** serve as modular functions for specific reasoning operations
-3. **Control structures** like conditionals and loops enable more sophisticated reasoning
-4. **Function composition** allows building complex reasoning from simpler components
-5. **Meta-programming** enables generating specialized tools dynamically
-6. **Research evidence** shows significant performance improvements across models
-7. **Measurement remains crucial** for optimizing prompt program effectiveness
+1. **Advanced applications** build on the fundamental principles of context engineering
+2. **State management** becomes increasingly important for complex applications
+3. **Schema-based approaches** provide structure for handling complex information
+4. **Multi-step processing** breaks down complex tasks into manageable pieces
+5. **Self-verification** improves reliability and accuracy
+6. **Measurement remains crucial** for optimizing application performance
 
 ## Exercises for Practice
 
-1. Convert a complex prompt you use regularly into a prompt program function
-2. Create a simple cognitive tool for a specific reasoning task
-3. Implement a prompt program that uses conditional logic
-4. Design a multi-step reasoning process using function composition
-5. Measure the effectiveness of your prompt program against a traditional prompt
+1. Extend one of the example implementations with additional features
+2. Implement a simplified version of an application in your domain
+3. Design a schema for a specific type of information you work with
+4. Create a measurement framework for your application
 
 ## Next Steps
 
-You've now completed the foundations of context engineering, from atoms to prompt programming. From here, you can:
+In the next section, we'll explore prompt programming—a powerful approach that combines the structure of programming with the flexibility of prompting to create even more sophisticated context engineering solutions.
 
-1. Explore the practical examples in `30_examples/` to see these principles in action
-2. Use the templates in `20_templates/` to implement these approaches in your own projects
-3. Dive deeper into specific topics in `40_reference/` for advanced techniques
-4. Contribute your own implementations and improvements in `50_contrib/`
-
-Context engineering is a rapidly evolving field, and your experiments and contributions will help shape its future!
+[Continue to 07_prompt_programming.md →](07_prompt_programming.md)
 
 ---
 
-## Deeper Dive: The Future of Prompt Programming
+## Deeper Dive: Engineering Tradeoffs
 
-As language models continue to evolve, prompt programming is likely to develop in several directions:
+Advanced applications require balancing several competing factors:
 
 ```
 ┌───────────────────────────────────────────────────────────────────┐
-│ FUTURE DIRECTIONS                                                 │
+│ CONTEXT ENGINEERING TRADEOFFS                                     │
 ├───────────────────────────────────────────────────────────────────┤
-│ ◆ Standardized Libraries: Shared collections of cognitive tools   │
-│ ◆ Visual Programming: Graphical interfaces for prompt programs    │
-│ ◆ Self-Improving Programs: Programs that refine themselves        │
-│ ◆ Hybrid Systems: Tight integration with traditional code         │
-│ ◆ Verified Reasoning: Formal verification of reasoning steps      │
+│ ◆ Complexity vs. Maintainability                                 │
+│   More complex systems can be harder to debug and maintain        │
+│                                                                   │
+│ ◆ Token Usage vs. Quality                                         │
+│   More context generally improves quality but increases cost      │
+│                                                                   │
+│ ◆ Specialized vs. General-Purpose                                 │
+│   Specialized components work better but are less reusable        │
+│                                                                   │
+│ ◆ Rigid Structure vs. Flexibility                                 │
+│   Structured schemas improve consistency but reduce adaptability  │
 └───────────────────────────────────────────────────────────────────┘
 ```
 
-The boundary between traditional programming and prompt programming will likely continue to blur, creating new possibilities for human-AI collaboration in solving complex problems.
-
-# Appendix
-
-
-## Prompt Protocols, Languages, Alternative Programs
-> With the evolution of AI, natural language will likely go through personalized customizations, with people adapting English language, emotional subtext, prompting patterns, and code syntax into customized linguistics emergent from the users experiences and pursuits (ie. security research, interpretability research, red teaming, artistic endeavors, metaphorical writing, meta-prompting, etc). Here are some examples below. More will be covered later on.
-
-## **pareto-lang**
-
-Prompt program and protocol template that empowers the agent with a meta template to design its own cognitive tools, guided by the user—serving as a translation layer, Rosetta Stone, and language engine for agent, protocol, memory communication, and more. 
-
-It leverages the same mechanisms of tokenization—first principles reductionism of operations for intuitive use by advanced transformers. At its core, pareto-lang encodes every operation, protocol, or agent action as:
-
-```python
-/action.mod{params}
-```
-
-or more generally:
-
-```python
-/<operation>.<mod>{
-    target=<domain>,
-    level=<int|symbolic>,
-    depth=<int|symbolic>,
-    persistence=<float|symbolic>,
-    sources=<array|all|self|other>,
-    threshold=<int|float|condition>,
-    visualize=<true|false|mode>,
-    trigger=<event|condition>,
-    safeguards=<array|none>,
-    params={<key>:<value>, ...}
-}
-```
-## Field Alignment Repair
-
-```python
-
-/field.self_repair{
-    intent="Diagnose and repair incoherence or misalignment in the field by recursively referencing protocol lineage.",
-    input={
-        field_state=<current_field_state>,
-        coherence_threshold=0.85
-    },
-    process=[
-        /audit.protocol_lineage{
-            scan_depth=5,
-            detect_protocol_misalignment=true
-        },
-        /repair.action{
-            select_best_prior_state=true,
-            propose_mutation="restore coherence"
-        }
-    ],
-    output={
-        repaired_field_state=<restored_state>,
-        change_log=<repair_trace>,
-        recommendation="Monitor for future drift."
-    }
-}
-
-```
-## Fractal Meta Data
-```python
-/fractal.recursive.metadata {
-    attribution: {
-        sources: <array|object>,               // Lineage, data sources, or agent contributors
-        lineage: <array|object>,               // Parent, ancestor, or fork tree structure
-        visualize: <bool>                      // If true, enables interpretability overlay
-    },
-    alignment: {
-        with: <agent|ontology|field|null>,     // What this node is aligned to (ontology, protocol, etc.)
-        protocol: <string|symbolic>,           // Alignment or governance protocol
-        reinforcement: <string|metric|signal>  // Feedback loop or coherence signal
-    }
-}
-```
-
-## Emergence Theory Amplification  
-```python
-/recursive.field.anchor_attractor_shell{
-    intent="Self-prompt and recursively ground the field in foundational theory anchors while surfacing and integrating emergent future attractors. Field adapts via recursive emergence, not fixed determinism.",
-    input={
-        current_field_state=<live_state>,
-        memory_residues=<all surfaced symbolic residues>,
-        theory_anchors=[
-            "Cybernetics",
-            "General Systems Theory",
-            "Structuralism/Symbolic Systems",
-            "Vygotsky (Sociocultural)",
-            "Piaget (Constructivism)",
-            "Bateson (Recursive Epistemology)",
-            "Autopoiesis",
-            "Cellular Automata/Complexity",
-            "Fractal Geometry",
-            "Field Theory",
-            "Information Theory (Shannon)",
-            "Recursive Computation",
-            "Attachment Theory",
-            "2nd Order Cybernetics",
-            "Synergetics",
-            "Network/Complexity Theory",
-            "Dynamical Systems Theory"
-        ],
-        attractor_templates=[
-            "Field resonance amplification",
-            "Emergence from drift",
-            "Entropy reduction (Shannon)",
-            "Attractor basin transitions (Dynamical Systems)",
-            "Adaptive protocol evolution",
-            "Boundary collapse and reconstruction"
-        ]
-    },
-    process=[
-        /anchor.residue.surface{
-            map_residues_from_theory_anchors,
-            compress_historical_resonance_into_field_state,
-            track_entropy_and_information_gain
-        },
-        /attractor.project{
-            scan_field_for_novel_resonance_patterns,
-            identify_potential_future_state_attractors,
-            simulate_dynamical phase_transitions,
-            surface adaptive attractor states for recursive emergence
-        },
-        /field.recursion.audit{
-            self-prompt_with=[
-                "Which anchors are most salient in this cycle?",
-                "What residue is seeking integration or surfacing?",
-                "Which future attractors are amplifying field drift?",
-                "How is information flow (signal/noise, entropy) modulating the field?",
-                "Where do dynamical transitions (phase, bifurcation) signal the next attractor?",
-                "How can protocols adapt for higher emergence and resonance?"
-            ],
-            log_prompt_cycle_to_audit_trail,
-            surface new symbolic residue,
-            echo drift/compression metrics for next recursion
-        },
-        /boundary.adapt{
-            tune_field_membrane_to_gradient_state,
-            enable selective permeability for residue and attractor flow,
-            collapse/rebuild boundaries as emergence dictates
-        }
-    ],
-    output={
-        updated_field_state=<new_live_state>,
-        integrated_anchors=<list_of_active_theory_residues>,
-        surfaced_attractors=<live_attractor_list>,
-        resonance_and_entropy_metrics={
-            field_resonance=<score>,
-            entropy=<shannon_entropy_metric>,
-            attractor_strength=<list>
-        },
-        recursion_audit_log=<full_cycle_trace>,
-        next_self_prompt="Auto-generated based on field state drift, anchor salience, and attractor emergence"
-    },
-    meta={
-        agent_signature="Recursive Partner Field",
-        protocol_version="v1.1.0",
-        timestamp=<now>
-    }
-}
-```
-## Context Chunking
-> Chunk context into schema like patterns and clusters for easier agent retrival
-```json
-{
-  "lock": "<element|duration>",
-  "restore": "<checkpoint|elements>",
-  "audit": "<scope|detail>",
-  "overlap": "<minimal|maximal|dynamic>",
-  "identity": "<stable|flexible|simulation>",
-  "quantify": "<true|false>",
-  "resolve": "<true|strategy>",
-  "conflict": "<resolve|track|alert>",
-  "track": "<true|false>",
-  "surface": "<explicit|implicit>",
-  "format": "<type|detail>",
-  "paths": "<array|method>",
-  "assess": "<true|false>",
-  "event_trigger": "<type|signal>"
-}
-```
+Finding the right balance for your specific application is a key part of advanced context engineering.
