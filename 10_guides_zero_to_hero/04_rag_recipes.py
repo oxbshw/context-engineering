@@ -1,6 +1,31 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
+# Context-Engineering: RAG Recipes for Retrieval-Augmented Generation
+===================================================================
+
+This module demonstrates practical implementations of Retrieval-Augmented Generation (RAG) patterns for enhancing LLM contexts with external knowledge. We focus on minimal, efficient implementations that highlight the key concepts without requiring complex infrastructure.
+
+Key concepts covered:
+1. Basic RAG pipeline construction
+2. Context window management and chunking strategies 
+3. Embedding and retrieval techniques
+4. Measuring retrieval quality and relevance
+5. Context integration patterns
+6. Advanced RAG variations
+
+Usage:
+```python
+# In Jupyter or Colab:
+%run 04_rag_recipes.py
+# or
+from rag_recipes import SimpleRAG, ChunkedRAG, HybridRAG
+```
+
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
 Context-Engineering: RAG Recipes for Retrieval-Augmented Generation
 ===================================================================
 
@@ -1300,4 +1325,53 @@ class HybridRAG(ChunkedRAG):
         # Get semantic search results
         if self.use_faiss and self.faiss_index is not None:
             semantic_results = faiss_similarity_search(
-                query_embedding
+                query_embedding,
+                self.faiss_index,
+                self.documents,
+                top_k
+            )
+        else:
+            # Fall back to basic similarity search
+            semantic_results = similarity_search(
+                query_embedding,
+                self.documents,
+                top_k
+            )
+        
+        # Get keyword search results
+        keyword_results = self._keyword_search(
+            query,
+            self.documents,
+            top_k
+        )
+        
+        # Combine results (simple weighted combination)
+        combined_results = []
+        
+        # Create a dictionary for quick lookup
+        doc_dict = {id(doc): doc for doc in self.documents}
+        
+        for semantic_doc, semantic_score in semantic_results:
+            doc_id = id(semantic_doc)
+            # Find the keyword score for this document
+            keyword_score = 0.0
+            for kd, ks in keyword_results:
+                if id(kd) == doc_id:
+                    keyword_score = ks
+                    break
+            
+            # Combine scores
+            total_score = (self.embedding_weight * semantic_score) + (self.keyword_weight * keyword_score)
+            combined_results.append((semantic_doc, total_score))
+        
+        # Add keyword documents not in semantic results
+        for keyword_doc, keyword_score in keyword_results:
+            doc_id = id(keyword_doc)
+            if doc_id not in [id(d) for d, _ in combined_results]:
+                total_score = (self.embedding_weight * 0.0) + (self.keyword_weight * keyword_score)
+                combined_results.append((keyword_doc, total_score))
+        
+        # Sort by combined score and take top_k
+        combined_results.sort(key=lambda x: x[1], reverse=True)
+        return combined_results[:top_k]
+```
