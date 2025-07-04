@@ -12,7 +12,7 @@ These properties address a fundamental challenge in context engineering: how do 
 
 Traditional approaches to context persistence rely on explicit memory mechanisms:
 
-```
+```plaintext
 TRADITIONAL PERSISTENCE:
 +-------+    store    +--------+    retrieve    +-------+
 | Input |------------>| Memory |--------------->| Output |
@@ -20,13 +20,14 @@ TRADITIONAL PERSISTENCE:
 ```
 
 This explicit storage has several limitations:
+
 - **Token Budget:** Each remembered item consumes context window space
 - **Retrieval Friction:** Requires explicit mechanisms to decide what to retrieve
 - **Semantic Fragmentation:** Often stores facts but loses relationships
 
 Neural fields offer a fundamentally different approach to persistence:
 
-```
+```plaintext
 FIELD PERSISTENCE:
                  Resonant
                  Patterns                 New
@@ -50,18 +51,15 @@ Instead of storing tokens, we maintain **activation patterns** across the field 
 
 In the IBM research paper "Eliciting Reasoning in Language Models with Cognitive Tools" (2025), the authors note:
 
-> "Cognitive architectures were based on the assumption that human reasoning emerges from the orchestrated execution of modular operations" — [IBM June 2025](https://www.arxiv.org/pdf/2506.12115) 
->
-> 
-> The key insight is that these operations form resonant patterns that persist across context shifts.
+> "Cognitive architectures were based on the assumption that human reasoning emerges from the orchestrated execution of modular operations" — [IBM June 2025](https://www.arxiv.org/pdf/2506.12115)
 
-This resonance mechanism is the key to field persistence. When information exhibits strong patterns, these patterns continue to influence the field even as new information enters.
+The key insight is that these operations form resonant patterns that persist across context shifts.
 
 ### Properties of Resonant Persistence
 
 1. **Strength Decay:** Resonant patterns naturally decay over time, with their influence diminishing according to:
    
-   ```
+   ```plaintext
    S(t) = S₀ * e^(-λt)
    ```
    
@@ -77,7 +75,7 @@ This resonance mechanism is the key to field persistence. When information exhib
 
 Consider how different types of information persist in a neural field:
 
-```
+```plaintext
                   High Coherence
                        ^
                        |
@@ -111,7 +109,7 @@ These "symbol abstraction heads" create resonant patterns across the model's att
 
 The resonance between two patterns A and B in a neural field can be expressed as:
 
-```
+```plaintext
 R(A, B) = cos(θ) * |A| * |B| * S(A, B)
 ```
 
@@ -133,7 +131,7 @@ We can measure several properties of field resonance:
 
 One of the most powerful properties of neural fields is their ability to form **attractors**—stable patterns that the field naturally converges toward. These attractors create regions of stability in the field's state space.
 
-```
+```plaintext
            ╭─────────╮       ╭─────────╮
            │         │       │         │
            │   A1    │       │   A2    │
@@ -166,10 +164,7 @@ One of the most powerful properties of neural fields is their ability to form **
 
 As described in the IBM paper, these attractors serve as cognitive frameworks that organize information:
 
-> "For instance, providing our “cognitive tools” to GPT-4.1 increases its pass@1 performance on AIME2024 from 26.7% to 43.3%, bringing it very close to the performance of o1-preview." — [IBM June 2025](https://www.arxiv.org/pdf/2506.12115) 
->
-> 
-> Providing LLMs with 'cognitive tools' enables them to form stable attractor states that persist across reasoning steps, significantly improving performance on complex tasks.
+> "For instance, providing our 'cognitive tools' to GPT-4.1 increases its pass@1 performance on AIME2024 from 26.7% to 43.3%, bringing it very close to the performance of o1-preview."
 
 ### Types of Attractors
 
@@ -182,7 +177,7 @@ As described in the IBM paper, these attractors serve as cognitive frameworks th
 
 To deliberately create attractors in a neural field, we can use the following protocol:
 
-```
+```plaintext
 /attractor.form{
     intent="Create stable cognitive framework for mathematical reasoning",
     field_state=<current_field>,
@@ -287,7 +282,7 @@ To work effectively with neural fields, we need ways to measure and visualize th
 
 ### Field State Visualization
 
-```
+```plaintext
 Field State Snapshot:
           
 Strength   
@@ -306,7 +301,7 @@ Strength
 
 ### Resonance Profile
 
-```
+```plaintext
 Resonance
 Response    
   ^        
@@ -324,7 +319,7 @@ Response
 
 ### Attractor Basin Visualization
 
-```
+```plaintext
 Energy    
   ^        
   │\                    /│
@@ -348,7 +343,7 @@ Let's explore how persistence and resonance enable powerful context engineering 
 
 By establishing resonant attractors for key conversation themes, we can maintain coherence even across very long interactions:
 
-```
+```plaintext
 /conversation.coherence{
     intent="Maintain thematic consistency across extended dialogues",
     field_state=<conversation_field>,
@@ -378,7 +373,7 @@ By establishing resonant attractors for key conversation themes, we can maintain
 
 Neural fields can naturally integrate new information with existing knowledge:
 
-```
+```plaintext
 /knowledge.integrate{
     intent="Seamlessly integrate new information with existing knowledge",
     field_state=<knowledge_field>,
@@ -404,7 +399,7 @@ Neural fields can naturally integrate new information with existing knowledge:
 
 As highlighted in the IBM paper, providing "cognitive tools" can significantly improve reasoning performance by establishing persistent reasoning frameworks:
 
-```
+```plaintext
 /reasoning.scaffold{
     intent="Support multi-step mathematical reasoning",
     field_state=<reasoning_field>,
@@ -608,7 +603,7 @@ In complex applications, we can orchestrate multiple specialized fields that int
 
 This multi-field approach allows for complex information processing:
 
-```
+```plaintext
 ╭─────────────────────────────────╮      ╭─────────────────────────────────╮
 │                                 │      │                                 │
 │     Conceptual Field            │      │     Procedural Field            │
@@ -651,7 +646,7 @@ Neural fields can operate at a "critical point" between order and chaos, where t
 
 The ICML paper highlights how symbol processing emerges from the field dynamics:
 
-> "These results have major implications both for the debate over whether language models are capable of genuine reasoning, and for the broader debate between traditional symbolic and neural network approaches."
+> "These results have major implications both for the debate regarding the role of post-training methods in eliciting reasoning in LLMs versus the role of inherent capabilities acquired during pre-training, and whether posttraining merely uncovers these latent abilities."
 
 This emergent symbolic processing arises from:
 - Abstraction heads that extract common patterns
@@ -670,9 +665,9 @@ Neural fields with resonance and persistence offer a powerful new paradigm for c
 
 In our next exploration, we'll examine how to orchestrate multiple fields and implement advanced field operations for specific applications.
 
----
+--- 
 
-> **Key Takeaways:**
+> **Key Takeaways:** 
 > - Persistence in neural fields emerges from resonance and attractor dynamics
 > - Attractors form stable centers of organization in the field's state space
 > - Resonance determines how information patterns interact and reinforce
