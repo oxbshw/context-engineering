@@ -1,6 +1,6 @@
 # 14. Unified Field Theory
 
-_Integrating fields, symbols, and quantum semantics into a coherent framework_
+## Integrating fields, symbols, and quantum semantics into a coherent framework
 
 > "The most incomprehensible thing about the world is that it is comprehensible."
 > — Albert Einstein
@@ -42,14 +42,14 @@ Let's start with a physical analogy to build intuition: a lake with boats, fish,
 
 ```
     ┌─────────────────────────────────────────┐
-    │                 Wind                     │
-    │               ↙     ↘                   │
+    │                 Wind                    │
+    │               ↙     ↘                  │
     │         ~~~~~~       ~~~~~~             │
     │    ~~~~ Waves          Waves ~~~~       │
     │  ~~                             ~~      │
     │ ~    🚣‍♀️          🐟          🚣‍♂️     ~ │
     │ ~  Boats        Fish          Boats   ~ │
-    │ ~    ⚛️          ⚛️            ⚛️      ~ │
+    │ ~    ⚛️          ⚛️            ⚛️    ~│
     │ ~ Particles   Particles    Particles  ~ │
     │  ~~                               ~~    │
     │    ~~~~~                     ~~~~~      │
