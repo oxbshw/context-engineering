@@ -35,8 +35,8 @@ Context Field Architecture:
 │  │  chatbot_   │◄──►│  protocol_  │◄──►│  context_   │  │
 │  │  core.py    │    │  shells.py  │    │  field.py   │  │
 │  └─────┬───────┘    └─────┬───────┘    └─────┬───────┘  │
-│        │                   │                   │          │
-│        ▼                   ▼                   ▼          │
+│        │                   │                   │        │
+│        ▼                   ▼                   ▼        │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐  │
 │  │ conversation│    │ meta_       │    │             │  │
 │  │ examples.py │    │ recursive_  │    │  utils.py   │  │
@@ -45,7 +45,7 @@ Context Field Architecture:
 │                                                         │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐  │
 │  │  docs/      │    │  notebooks/ │    │  assets/    │  │
-│  │  tutorials  │    │  examples   │    │  diagrams  │  │
+│  │  tutorials  │    │  examples   │    │  diagrams   │  │
 │  └─────────────┘    └─────────────┘    └─────────────┘  │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
