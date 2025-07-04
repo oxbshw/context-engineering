@@ -1,6 +1,6 @@
 # 12. Symbolic Mechanisms
 
-_Understanding and leveraging emergent symbolic processing in LLMs_
+## Understanding and Leveraging Emergent Symbolic Processing in LLMs
 
 > "These results suggest a resolution to the longstanding debate between symbolic and neural network approaches, illustrating how neural networks can learn to perform abstract reasoning via the development of emergent symbol processing mechanisms."
 > — Yang et al., 2025
