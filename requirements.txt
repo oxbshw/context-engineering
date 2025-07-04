@@ -1,0 +1,8 @@
+streamlit
+transformers
+llama-index
+requests
+flake8
+pytest
+jupyter
+pyyaml
