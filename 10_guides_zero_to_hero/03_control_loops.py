@@ -1,13 +1,26 @@
 #!/usr/bin/env python
+ # -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
+# Context-Engineering: Control Loops for Multi-Step LLM Interactions
+=================================================================
+
+This module demonstrates how to implement control flow mechanisms for orchestrating complex multi-step LLM interactions. Building on context expansion techniques, we explore patterns for:
+
+1. Sequential chaining
+2. Iterative refinement
+3. Conditional branching
+4. Self-critique and correction
+5. External validation loops
+
+```python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Context-Engineering: Control Loops for Multi-Step LLM Interactions
 =================================================================
 
-This module demonstrates how to implement control flow mechanisms
-for orchestrating complex multi-step LLM interactions. Building on
-the context expansion techniques from previous notebooks, we now
-explore patterns for:
+This module demonstrates how to implement control flow mechanisms for orchestrating complex multi-step LLM interactions.
+Building on context expansion techniques from previous notebooks, we now explore patterns for:
 
 1. Sequential chaining (output of one step → input to next)
 2. Iterative refinement (improving a response through cycles)
@@ -15,8 +28,7 @@ explore patterns for:
 4. Self-critique and correction (meta-evaluation of outputs)
 5. External validation loops (using tools/knowledge to verify)
 
-The patterns are implemented with a focus on token efficiency and
-maintaining context coherence across steps.
+The patterns are implemented with a focus on token efficiency and maintaining context coherence across steps.
 
 Usage:
     # In Jupyter or Colab:
@@ -77,11 +89,11 @@ DEFAULT_MAX_TOKENS = 500
 def setup_client(api_key=None, model=DEFAULT_MODEL):
     """
     Set up the API client for LLM interactions.
-
+    
     Args:
         api_key: API key (if None, will look for OPENAI_API_KEY in env)
         model: Model name to use
-
+    
     Returns:
         tuple: (client, model_name)
     """
@@ -101,11 +113,11 @@ def setup_client(api_key=None, model=DEFAULT_MODEL):
 def count_tokens(text: str, model: str = DEFAULT_MODEL) -> int:
     """
     Count tokens in text string using the appropriate tokenizer.
-
+    
     Args:
         text: Text to tokenize
         model: Model name to use for tokenization
-
+    
     Returns:
         int: Token count
     """
@@ -129,7 +141,7 @@ def generate_response(
 ) -> Tuple[str, Dict[str, Any]]:
     """
     Generate a response from the LLM and return with metadata.
-
+    
     Args:
         prompt: The prompt to send
         client: API client (if None, will create one)
@@ -137,7 +149,7 @@ def generate_response(
         temperature: Temperature parameter
         max_tokens: Maximum tokens to generate
         system_message: System message to use
-
+    
     Returns:
         tuple: (response_text, metadata)
     """
@@ -200,7 +212,6 @@ def format_metrics(metrics: Dict[str, Any]) -> str:
     Returns:
         str: Formatted metrics string
     """
-    # Select the most important metrics to show
     key_metrics = {
         "prompt_tokens": metrics.get("prompt_tokens", 0),
         "response_tokens": metrics.get("response_tokens", 0),
@@ -977,7 +988,7 @@ class SelfCritique(ControlLoop):
         Args:
             run_details: Run details from run()
         """
-        display(HTML("<h2>Self-Critique Results</h2>"))
+        display(HTML("<h>2Self-Critique Results</h2>"))
         
         # Display input
         display(HTML("<h3>Input</h3>"))
@@ -1363,3 +1374,4 @@ def example_external_validation():
 if __name__ == "__main__":
     print("Control Loops for Multi-Step LLM Interactions")
     print("Run examples individually or import classes for your own use.")
+```
