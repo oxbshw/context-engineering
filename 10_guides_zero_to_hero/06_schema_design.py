@@ -1,3 +1,24 @@
+# Context-Engineering: Schema Design for Structured Context
+========================================================
+
+This module focuses on designing structured schemas for LLM context, enabling more consistent, verifiable, and composable interactions. Schema-driven contexts reduce variability, increase prompt robustness, and create a bridge between human intent and machine processing.
+
+Key concepts covered:
+1. Basic schema patterns and structures
+2. Schema validation and enforcement
+3. Recursive and fractal schemas
+4. Field protocols as schema-driven contexts
+5. Measuring schema effectiveness
+
+Usage:
+```python
+# In Jupyter or Colab:
+%run 06_schema_design.py
+# or
+from schema_design import JSONSchema, SchemaContext, FractalSchema
+```
+
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
@@ -1304,8 +1325,8 @@ HUMAN_DEV_SCHEMA = {
             "description": "Fractal/recursive parameters",
             "properties": {
                 "maxDepth": {"type": "integer", "default": 7},
-                "allowMetaEvolution": {"type": "boolean", "default": true},
-                "propagateResidueUpstream": {"type": "boolean", "default": true}
+                "allowMetaEvolution": {"type": "boolean", "default": True},
+                "propagateResidueUpstream": {"type": "boolean", "default": True}
             }
         },
         "saveState": {
@@ -1440,7 +1461,7 @@ PROTOCOL_SHELL_SCHEMA = {
         "intent": {"type": "string"},
         "input": {
             "type": "object",
-            "additionalProperties": true
+            "additionalProperties": True
         },
         "process": {
             "type": "array",
@@ -1448,14 +1469,14 @@ PROTOCOL_SHELL_SCHEMA = {
                 "type": "object",
                 "properties": {
                     "name": {"type": "string"},
-                    "params": {"type": "object", "additionalProperties": true}
+                    "params": {"type": "object", "additionalProperties": True}
                 },
                 "required": ["name"]
             }
         },
         "output": {
             "type": "object",
-            "additionalProperties": true
+            "additionalProperties": True
         },
         "meta": {
             "type": "object",
@@ -1612,7 +1633,7 @@ def example_schema_context():
     # Create schema context
     context = SchemaContext(
         schema=schema,
-        system_message="You are a research assistant that summarizes academic papers in a structured format.",
+        system_message="You are a research assistant who summarizes academic papers in a structured format.",
         verbose=True
     )
     
@@ -1720,4 +1741,4 @@ def example_protocol_shell_schema():
 # Main execution (when run as a script)
 if __name__ == "__main__":
     print("Schema Design for Structured Context")
-    print("Run examples individually or import classes for your own use.")
+    print("Run examples individually or import classes for your own use.")```
